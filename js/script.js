@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ─── Sound Engine (Web Audio API) ─────────────
   const AudioCtx = window.AudioContext || window.webkitAudioContext;
   let audioCtx = null;
-  let soundEnabled = false; // Off by default
+  let soundEnabled = true; // On by default
 
   function ensureAudioCtx() {
     if (!audioCtx) audioCtx = new AudioCtx();
