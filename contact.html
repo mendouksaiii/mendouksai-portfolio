@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Mendouksai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+    .platform-card {
+      text-decoration: none;
+      display: block;
+      height: 100%;
+    }
+    .platform-inner {
+      text-align: center;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 380px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(176,38,255,0.1);
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .platform-inner:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 10px 40px rgba(0, 240, 255, 0.2);
+      transform: translateY(-10px);
+    }
+    .platform-inner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 4px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--cyan));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .platform-inner:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .platform-avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid var(--accent-primary);
+      box-shadow: 0 0 20px rgba(176,38,255,0.4);
+      object-fit: cover;
+      margin-bottom: 2rem;
+      transition: transform 0.5s ease;
+    }
+    .platform-inner:hover .platform-avatar {
+      transform: scale(1.1) rotate(5deg);
+      border-color: var(--cyan);
+      box-shadow: 0 0 30px rgba(0,240,255,0.6);
+    }
+    
+    .platform-title {
+      color: #fff;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      transition: color 0.3s ease;
+    }
+    .platform-inner:hover .platform-title {
+      color: var(--cyan);
+    }
+    
+    .platform-handle {
+      color: var(--accent-primary);
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      word-break: break-all;
+    }
+    
+    .platform-desc {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-gradient"></div>
+
+  <nav class="navbar">
+    <div class="logo">Mendouksai<span>.</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="web3-creator.html">Creator</a>
+      <a href="developer.html">Developer</a>
+      <a href="contact.html" class="active">Contact Us</a>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <header class="page-header" style="text-align: center; margin-bottom: 2rem;">
+      <h1 style="font-size: 4rem; background: linear-gradient(135deg, #fff, var(--cyan)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Establish Uplink</h1>
+      <p class="page-subtitle" style="max-width: 600px; margin: 0 auto; margin-top: 1rem;">Choose your preferred secure channel to connect with the Mendouksai Network.</p>
+    </header>
+
+    <div class="contact-grid">
+      
+      <!-- X / Twitter -->
+      <a href="https://x.com/mendouksaiiii_?s=21" target="_blank" class="platform-card">
+        <div class="card glass-card platform-inner" style="animation: slideUp 0.8s ease 0s backwards;">
+          <img src="assets/contact-x.jpg" alt="Mendouksai on X" class="platform-avatar">
+          <h3 class="platform-title">X / Twitter</h3>
+          <div class="platform-handle">@mendouksaiiii_</div>
+          <div class="platform-desc">Latest Alpha, deep-dives, and hot takes on Web3 Gaming.</div>
+        </div>
+      </a>
+
+      <!-- Telegram -->
+      <a href="https://t.me/mendouksaiii" target="_blank" class="platform-card">
+        <div class="card glass-card platform-inner" style="animation: slideUp 0.8s ease 0.2s backwards;">
+          <img src="assets/contact-tg.jpg" alt="Mendouksai on Telegram" class="platform-avatar">
+          <h3 class="platform-title">Telegram</h3>
+          <div class="platform-handle">@mendouksaiii</div>
+          <div class="platform-desc">Lightning fast direct encrypted communications.</div>
+        </div>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:mendouksaiiiix99@gmail.com" class="platform-card">
+        <div class="card glass-card platform-inner" style="animation: slideUp 0.8s ease 0.4s backwards;">
+          <img src="assets/contact-email.jpg" alt="Email Mendouksai" class="platform-avatar">
+          <h3 class="platform-title">Email</h3>
+          <div class="platform-handle">mendouksaiiiix99@gmail.com</div>
+          <div class="platform-desc">Formal inquiries, campaign partnerships, and business ops.</div>
+        </div>
+      </a>
+
+      <!-- Discord -->
+      <a href="https://discordapp.com/users/1223257693603631216" target="_blank" class="platform-card">
+        <div class="card glass-card platform-inner" style="animation: slideUp 0.8s ease 0.6s backwards;">
+          <img src="assets/contact-discord.jpg" alt="Mendouksai on Discord" class="platform-avatar">
+          <h3 class="platform-title">Discord</h3>
+          <div class="platform-handle">Mendouksai#99</div>
+          <div class="platform-desc">Voice comms, community building, and gaming sessions.</div>
+        </div>
+      </a>
+
+    </div>
+  </main>
+  <!-- Floating Virtual Assistant Bitmoji -->
+  <div style="position: fixed; bottom: 30px; right: 30px; z-index: 1000; animation: float 5s infinite ease-in-out;" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <img src="assets/creator-pfp-tiny.jpg" alt="Agent Mendouksai" class="anim-pulse" style="width: 65px; height: 65px; border-radius: 50%; border: 3px solid var(--cyan); box-shadow: 0 0 20px rgba(0,240,255,0.5); cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Mendouksai Network is Online - Scroll to Top">
+  </div>
+</body>
+</html>

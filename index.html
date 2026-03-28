@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mendouksai | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Additional Styles for the new sections */
+    .scroll-section {
+      padding: 6rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .section-title {
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 3rem;
+      background: linear-gradient(135deg, #fff, var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    /* Stats/Ecosystem Banner */
+    .stats-banner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: rgba(176, 38, 255, 0.05);
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      border-radius: 20px;
+      padding: 3rem;
+      margin-top: 2rem;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--cyan);
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+    }
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Contact Form Layout */
+    .contact-container {
+      display: flex;
+      gap: 4rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 30px;
+      padding: 4rem;
+      border: 1px solid rgba(176, 38, 255, 0.2);
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+      flex-wrap: wrap;
+    }
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+    }
+    .contact-info p {
+      color: var(--text-secondary);
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .contact-socials {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(176, 38, 255, 0.1);
+      border: 1px solid var(--accent-primary);
+      color: #fff;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .social-btn:hover {
+      background: var(--accent-primary);
+      box-shadow: 0 0 15px var(--accent-primary);
+      transform: translateY(-5px);
+    }
+    
+    .contact-form {
+      flex: 1.5;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .form-group label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .form-control {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+    }
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+    .submit-btn {
+      background: linear-gradient(45deg, var(--accent-primary), var(--cyan));
+      border: none;
+      color: #fff;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 240, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-gradient"></div>
+
+  <nav class="navbar">
+    <div class="logo">Mendouksai<span>.</span></div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="web3-creator.html">Creator</a>
+      <a href="developer.html">Developer</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="hero">
+    <div class="hero-content">
+      <img src="assets/pfp.jpg" alt="Mendouksai PFP" class="hero-pfp">
+      <h1 class="hero-title">Entering the <span class="highlight">Vanguard.</span></h1>
+      <p class="hero-subtitle">Dual-wielding content creation and autonomous AI development to reshape Web3 gaming paradigms.</p>
+    </div>
+
+    <!-- Intro Writeup (Replacing Links) with Bitmoji -->
+    <div class="hero-writeup" style="flex: 1; max-width: 600px; background: rgba(0,0,0,0.4); padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(176,38,255,0.2); box-shadow: 0 0 30px rgba(0,0,0,0.5); animation: slideUp 1s ease 0.2s backwards; display: flex; gap: 2rem; align-items: center;">
+      <div style="flex: 1;">
+        <h3 style="color: var(--cyan); margin-bottom: 1rem; font-size: 1.8rem;">The Duality of Web3</h3>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6;">
+          I operate at the absolute limits of Web3 gaming—simultaneously engineering the decentralized infrastructure that powers autonomous economies, and documenting the cultural shift for over 1.2M+ viewers as a creator. 
+          <br><br>
+          Use the navigation menu above to explore my Developer builds or dive into my Creator journey. Alternatively, scroll down to read more about my mission and drop me a transmission.
+        </p>
+      </div>
+      <div style="flex: 0.8; display: flex; justify-content: center;">
+        <img src="assets/creator-pfp-landing1.jpg" alt="Mendouksai Avatar 1" style="width: 100%; max-width: 150px; border-radius: 20px; border: 2px solid var(--accent-primary); animation: float 6s infinite ease-in-out;">
+      </div>
+    </div>
+  </main>
+
+  <!-- About / Ecosystem Section -->
+  <section class="scroll-section">
+    <h2 class="section-title">The Masterplan</h2>
+    
+    <!-- Masterplan Text with Bitmoji -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 3rem; margin: 0 auto; max-width: 900px; flex-wrap: wrap;">
+      <img src="assets/creator-pfp-top.jpg" alt="Mendouksai Avatar 2" style="width: 180px; border-radius: 20px; border: 2px solid var(--cyan); box-shadow: 0 0 30px rgba(0,240,255,0.2); animation: float 5s infinite ease-in-out reverse;">
+      
+      <div style="color: var(--text-secondary); font-size: 1.25rem; line-height: 1.8; flex: 1; min-width: 300px;">
+        <p>
+          I bridge the gap between building cutting-edge technical primitives and creating comprehensive narratives that gamers actually care about. Whether I am architecting autonomous underwriting engines for decentralized liquidity or dissecting the latest Immutable TGE on X, the goal remains the same: scaling the next generation of digital ownership. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Stats Banner with Bitmoji -->
+    <div style="position: relative; margin-top: 4rem;">
+      <img src="assets/creator-pfp-bot.jpg" alt="Mendouksai Avatar 3" style="position: absolute; top: -60px; right: 2rem; width: 120px; border-radius: 50%; border: 2px solid var(--accent-primary); box-shadow: 0 0 20px rgba(176,38,255,0.4); z-index: 10; animation: float 4s infinite ease-in-out;">
+      
+      <div class="stats-banner">
+        <div class="stat-item">
+          <div class="stat-number">1.2M+</div>
+          <div class="stat-label">Organic Views</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3+</div>
+          <div class="stat-label">Major Protocol Partnerships</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Production Web3 Apps</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="scroll-section" id="contact">
+    <h2 class="section-title">Let's Build Together</h2>
+    
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3 style="font-size: 2rem; color: #fff; margin-bottom: 1rem;">Get In Touch</h3>
+        <p>
+          Whether you’re a studio looking to partner for a deep-dive campaign, a protocol needing robust wallet architecture, or just a fellow builder navigating the frontier—drop me a line.
+        </p>
+        
+        <img src="assets/creator-pfp.jpg" alt="Mendouksai Avatar 4" style="width: 140px; border-radius: 20px; margin-top: 1rem; border: 2px solid var(--cyan); animation: float 5s infinite ease-in-out;">
+
+        <div class="contact-socials">
+          <a href="https://twitter.com/mendouksaiiii_" target="_blank" class="social-btn">𝕏</a>
+          <a href="#" class="social-btn">GH</a> <!-- GitHub -->
+          <a href="#" class="social-btn">IN</a> <!-- LinkedIn / Discord etc -->
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Transmission Sent to Mendouksai Network!');">
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <div class="form-group" style="flex: 1;">
+            <label for="name">Alias / Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group" style="flex: 1;">
+            <label for="email">Uplink (Email)</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Protocol / Subject</label>
+          <input type="text" id="subject" class="form-control" placeholder="What are we discussing?" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Transmission</label>
+          <textarea id="message" class="form-control" placeholder="Drop the alpha here..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" style="margin-top: 1rem;">Transmit Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 2rem; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-secondary); margin-top: 4rem;">
+    <p>&copy; 2026 Mendouksai Vanguard. Built for the Decentralized Web.</p>
+  </footer>
+
+  <!-- Floating Virtual Assistant Bitmoji -->
+  <div style="position: fixed; bottom: 30px; right: 30px; z-index: 1000; animation: float 5s infinite ease-in-out;" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <img src="assets/creator-pfp-tiny.jpg" alt="Agent Mendouksai" class="anim-pulse" style="width: 65px; height: 65px; border-radius: 50%; border: 3px solid var(--cyan); box-shadow: 0 0 20px rgba(0,240,255,0.5); cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Mendouksai Network is Online - Scroll to Top">
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

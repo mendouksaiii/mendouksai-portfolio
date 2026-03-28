@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Stage | Mendouksai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .article-section {
+      background: rgba(176, 38, 255, 0.03);
+      border: 1px solid rgba(176, 38, 255, 0.1);
+      border-radius: 20px;
+      padding: 4rem;
+      margin-bottom: 5rem;
+      position: relative;
+    }
+    .article-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 5px; height: 100%;
+      background: var(--cyan);
+      border-radius: 20px 0 0 20px;
+    }
+    .article-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .article-body {
+      color: var(--text-secondary);
+      font-size: 1.15rem;
+      line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .section-title {
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 3rem;
+      background: linear-gradient(135deg, #fff, var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-gradient"></div>
+
+  <nav class="navbar">
+    <div class="logo">Mendouksai<span>.</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="web3-creator.html">Creator</a>
+      <a href="developer.html" class="active">Developer</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <header class="page-header">
+      <h1>Technical Architecture</h1>
+      <p class="page-subtitle">From breaking down the narrative to engineering the bedrock. Transitioning from Analyst to Autonomous Architect.</p>
+    </header>
+
+    <!-- Vibecoding Article Section -->
+    <section class="article-section" style="display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
+      <div class="article-content" style="flex: 1; min-width: 300px;">
+        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <img src="assets/creator-pfp-tiny.jpg" alt="Mendouksai Headshot" style="width: 70px; height: 70px; border-radius: 50%; border: 3px solid var(--cyan); object-fit: cover; box-shadow: 0 0 15px rgba(0,240,255,0.6);">
+          <h2 class="article-title">Breaking the Code Barrier:<br><span style="color: var(--cyan); font-size: 1.8rem; font-weight: 600;">My Transition from Analyst to Architect</span></h2>
+        </div>
+        
+        <div class="article-body">
+          <p>
+            For the last eight months, I’ve been living in the narrative. As a Web3 creator, I’ve watched 1.2 million views roll in while I spent my days breaking down complex ecosystems for players. My mission was simple: explain why digital ownership matters. But eventually, just talking about the architecture wasn't enough. I started seeing the cracks in the foundation—the friction points, the failed wallet connections, the clunky UI—and I realized I didn't just want to critique the bedrock. I wanted to build it.
+          </p>
+          <p>
+            The problem? The "technical tax." If you’re a solo creator, the leap from "I have a great idea" to "here is the working smart contract" usually involves a massive bottleneck of syntax errors and deployment loops.
+          </p>
+          <p style="color: #fff; font-weight: 600; font-size: 1.4rem; padding-left: 1rem; border-left: 3px solid var(--accent-primary);">
+            That is, until I stopped trying to "code" and started vibecoding.
+          </p>
+
+          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.6rem;">Moving at the Speed of Thought</h3>
+          <p>
+            Vibecoding isn’t just a fancy term for using AI to write boilerplate. It’s a complete shift in how you think. It’s that flow state where the gap between your creative intent and a production-ready execution basically hits zero.
+          </p>
+          <p>
+            I stopped looking at a blank IDE as a battleground and started treating it like a high-speed partnership. I brought the high-level architecture, the aesthetic "vibe," and the deep Web3 domain knowledge I’d gained from my 1.2M+ view journey. My AI co-pilot handled the heavy lifting—the UI translations, the complex logic orchestration, and the rigorous testing—in real-time.
+          </p>
+          <p>
+            Suddenly, I wasn't just a guy with a vision; I was a Technical Director moving at the absolute speed of thought.
+          </p>
+
+          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.6rem;">The Toolkit: Building for the Real World</h3>
+          <p>
+            In just a few weeks of this partnership, we didn't just iterate—we shipped. We built tools that solved the exact frustrations I’d been analyzing in my content:
+          </p>
+
+          <ul style="list-style-type: none; padding-left: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+            <li><strong style="color: var(--cyan);">WalletSecure:</strong> I was tired of seeing dApps fail at the first hurdle. We built a React pipeline that kills those "cold-start" connection failures for good.</li>
+            <li><strong style="color: var(--cyan);">M-Fi Underwriter:</strong> Built for the Galáctica Hackathon, this engine evaluates player liquidity entirely on-chain. It’s smart, it’s autonomous, and it works.</li>
+            <li><strong style="color: var(--cyan);">Agent Wallet Runtime:</strong> We engineered the core Node.js runtime that lets AI agents transact on-chain without needing a human to hold their hand.</li>
+            <li><strong style="color: var(--cyan);">The Digital Home:</strong> Even the site you’re looking at—the dark-glass, cyberpunk aesthetic with live metric integrations—was vibecoded from a few design references and an overarching vision.</li>
+          </ul>
+
+          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.6rem;">The New Standard</h3>
+          <p>
+            What this journey taught me is that the traditional barriers to Web3 development are officially dead. When you stop fighting the syntax and start directing the logic, you realize that the hottest new programming language is actually just English.
+          </p>
+          <p>
+            My co-pilot handled the styling and the deployment syntax. I handled the soul of the project.
+          </p>
+          <p>
+            The last 8 months were about establishing the narrative and building the community. This next chapter? It’s about engineering the foundation we’ve all been waiting for. Welcome to the vanguard.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bitmoji Avatar Stack -->
+      <div class="article-avatar" style="flex: 0.7; display: flex; flex-direction: column; justify-content: space-around; gap: 4rem; position: relative;">
+        <img src="assets/creator-pfp-landing1.jpg" alt="Mendouksai 3D Architect" style="width: 100%; max-width: 320px; margin: 0 auto; border-radius: 20px; border: 2px solid var(--cyan); box-shadow: 0 0 50px rgba(0,240,255,0.3); animation: float 6s infinite ease-in-out;">
+        <img src="assets/creator-pfp.jpg" alt="Mendouksai 3D Builder" style="width: 100%; max-width: 320px; margin: 0 auto; border-radius: 20px; border: 2px solid var(--accent-primary); box-shadow: 0 0 50px rgba(176,38,255,0.3); animation: float 5s infinite ease-in-out reverse;">
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <h2 class="section-title" id="builds">Production Builds</h2>
+    <section class="portfolio-grid">
+      <!-- M-Fi -->
+      <article class="port-card">
+        <div class="port-img" style="background: rgba(0,0,0,0.6) url('assets/mfi-logo.png') center/contain no-repeat; padding: 2rem;"></div>
+        <div class="port-content">
+          <h3>M-Fi Underwriter</h3>
+          <p>
+            An autonomous liquidity evaluation engine engineered for the Galáctica Hackathon. 
+            Powered by advanced AI models, it dynamically underwrites player assets and risk profiles entirely on-chain.
+          </p>
+        </div>
+        <div class="port-hover-overlay">
+          <a href="https://m-fi-underwriter.vercel.app" target="_blank" class="view-btn">View Deployment</a>
+        </div>
+      </article>
+
+      <!-- WalletSecure -->
+      <article class="port-card">
+        <div class="port-img" style="background: rgba(0,0,0,0.6) url('assets/ws-logo.png') center/contain no-repeat; padding: 2rem;"></div>
+        <div class="port-content">
+          <h3>WalletSecure</h3>
+          <p>
+            A seamless connection pipeline resolving persistent cold-start state failures in React applications. 
+            By engineering a robust connection loop, WalletSecure guarantees instant, frictionless dApp engagements.
+          </p>
+        </div>
+        <div class="port-hover-overlay">
+          <a href="https://walletsecure-8ilj.vercel.app/" target="_blank" class="view-btn">View Project</a>
+        </div>
+      </article>
+
+      <!-- Agent Wallet Runtime -->
+      <article class="port-card">
+        <div class="port-img" style="background: rgba(0,0,0,0.6) url('assets/awr-logo.png') center/contain no-repeat; padding: 2rem;"></div>
+        <div class="port-content">
+          <h3>Agent Wallet Runtime</h3>
+          <p>
+            The core Node.js/TypeScript runtime architecture allowing AI agents to securely transact 
+            directly with on-chain protocols without human intervention.
+          </p>
+        </div>
+        <div class="port-hover-overlay">
+          <a href="https://agent-wallet-runtime.vercel.app" target="_blank" class="view-btn">View Dashboard</a>
+        </div>
+      </article>
+
+      <!-- Immutable Quest -->
+      <article class="port-card">
+        <div class="port-img" style="background: rgba(0,0,0,0.6) url('https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?w=600&h=400&fit=crop') center/cover no-repeat; padding: 2rem;"></div>
+        <div class="port-content">
+          <h3>Immutable Quest Tracker</h3>
+          <p>
+            A Service Worker-compatible Supabase tracking extension. It seamlessly correlates gamer 
+            accomplishments, syncing progression directly to immutable on-chain profiles.
+          </p>
+        </div>
+        <div class="port-hover-overlay">
+          <a href="#" class="view-btn">Chrome Web Store</a>
+        </div>
+      </article>
+
+      <!-- Rift -->
+      <article class="port-card">
+        <div class="port-img" style="background: rgba(0,0,0,0.6) url('assets/rift-logo.png') center/contain no-repeat; padding: 2rem;"></div>
+        <div class="port-content">
+          <h3>Rift Protocol</h3>
+          <p>
+            A highly performant interactive DApp architected on Somnia. Utilizing Hardhat and an ultra-reactive 
+            frontend, Rift gamifies complex DeFi parameters seamlessly.
+          </p>
+        </div>
+        <div class="port-hover-overlay">
+          <a href="https://rift-protocol.app" target="_blank" class="view-btn">Launch App</a>
+        </div>
+      </article>
+    </section>
+  </main>
+  <!-- Floating Virtual Assistant Bitmoji -->
+  <div style="position: fixed; bottom: 30px; right: 30px; z-index: 1000; animation: float 5s infinite ease-in-out;" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <img src="assets/creator-pfp-tiny.jpg" alt="Agent Mendouksai" class="anim-pulse" style="width: 65px; height: 65px; border-radius: 50%; border: 3px solid var(--cyan); box-shadow: 0 0 20px rgba(0,240,255,0.5); cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Mendouksai Network is Online - Scroll to Top">
+  </div>
+</body>
+</html>

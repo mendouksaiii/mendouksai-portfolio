@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator Journey | Mendouksai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Article Section from Previous Step */
+    .article-section {
+      background: rgba(176, 38, 255, 0.03);
+      border: 1px solid rgba(176, 38, 255, 0.1);
+      border-radius: 20px;
+      padding: 4rem;
+      margin-bottom: 5rem;
+      position: relative;
+    }
+    .article-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 5px; height: 100%;
+      background: var(--accent-primary);
+      border-radius: 20px 0 0 20px;
+    }
+    .article-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+    .article-body {
+      color: var(--text-secondary);
+      font-size: 1.15rem;
+      line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Advanced 3D Coverflow Slider UI for Twitter Embeds */
+    .slider-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 5rem;
+      width: 100%;
+      perspective: 1500px;
+    }
+    
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 600px; /* Accommodate tall embedded tweets */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      padding: 1rem 0;
+    }
+    
+    .slider-track {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .slide {
+      position: absolute;
+      width: 350px;
+      transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 0;
+      transform: translateX(0) scale(0.7) rotateY(0deg);
+    }
+    
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 3;
+      transform: translateX(0) scale(1) rotateY(0deg);
+    }
+    
+    .slide.prev {
+      opacity: 0.5;
+      pointer-events: auto;
+      z-index: 2;
+      transform: translateX(-70%) scale(0.85) rotateY(25deg);
+      cursor: pointer;
+    }
+    
+    .slide.next {
+      opacity: 0.5;
+      pointer-events: auto;
+      z-index: 2;
+      transform: translateX(70%) scale(0.85) rotateY(-25deg);
+      cursor: pointer;
+    }
+
+    /* Mobile handling for 3D slider */
+    @media (max-width: 768px) {
+      .slide { width: 300px; }
+      .slide.prev { transform: translateX(-30%) scale(0.8) rotateY(15deg); opacity: 0.2; pointer-events: none; }
+      .slide.next { transform: translateX(30%) scale(0.8) rotateY(-15deg); opacity: 0.2; pointer-events: none; }
+    }
+    
+    .slide-content-wrapper {
+      width: 100%;
+      height: 100%;
+      max-height: 550px;
+      overflow-y: auto;
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 1rem;
+      border: 2px solid transparent;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    /* Custom Scrollbar for inner tweets */
+    .slide-content-wrapper::-webkit-scrollbar { width: 5px; }
+    .slide-content-wrapper::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 10px; }
+
+    .slide.active .slide-content-wrapper {
+      border-color: var(--cyan);
+      box-shadow: 0 0 50px rgba(0, 240, 255, 0.3);
+    }
+    
+    .slider-controls {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 2rem;
+      z-index: 10;
+    }
+    
+    .slider-arrow {
+      background: rgba(0, 240, 255, 0.05);
+      color: var(--cyan);
+      border: 1px solid var(--cyan);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.8rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+    
+    .slider-arrow:hover {
+      background: var(--cyan);
+      color: #000;
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+      transform: scale(1.15) rotate(10deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-gradient"></div>
+
+  <nav class="navbar">
+    <div class="logo">Mendouksai<span>.</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="web3-creator.html" class="active">Creator</a>
+      <a href="developer.html">Developer</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <main class="page-container">
+    <header class="page-header">
+      <h1>Creator Journey</h1>
+      <p class="page-subtitle">Documenting the shift in gaming paradigms. Bringing transparent analysis, deep-dives, and viral mindshare to the decentralized ecosystem.</p>
+    </header>
+
+    <!-- Featured Written Article Section with Bitmoji Avatar -->
+    <section class="article-section" style="display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
+      
+      <!-- Article Text -->
+      <div class="article-content" style="flex: 1; min-width: 300px;">
+        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <img src="assets/creator-pfp-tiny.jpg" alt="Mendouksai Headshot" style="width: 70px; height: 70px; border-radius: 50%; border: 3px solid var(--accent-primary); object-fit: cover; box-shadow: 0 0 15px rgba(176,38,255,0.6);">
+          <h2 class="article-title" style="margin-bottom: 0;">The Web3 Vanguard: How One Creator Reshaped the Gaming Narrative in 8 Months</h2>
+        </div>
+        <div class="article-body">
+          <p>
+            Hey, I am Mendouksai. I’m a Web3 gaming creator who has amassed over 1.2 million views in just 8 months of creating. As a creator officially partnered with Immutable, Kronicles, and YGG, I’ve spent the last year proving that the future of gaming isn't just about the tech—it's about the stories we tell and the communities we build around them.
+          </p>
+
+          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem;">The 1.2 Million View Journey</h3>
+          <p>
+            In an industry that moves at the speed of light, standing out requires a mix of consistency, tactical depth, and a clear voice. Reaching over a million views in under a year wasn't an accident. It was the result of a hyper-focused strategy: breaking down the barriers of Web3 gaming to make it accessible, entertaining, and profitable for the players.
+          </p>
+          <p>
+            Whether it’s a deep dive into the 3v3 ranked matches of Calamity or navigating the high-stakes world of Spludge Wars, my content is designed to give players the "Alpha" they need while keeping the energy high.
+          </p>
+
+          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem;">Partnerships That Power the Play</h3>
+          <p>
+            My journey has been defined by the company I keep. Being a partner with giants like Immutable, Kronicles, and YGG means being at the heartbeat of the ecosystem.
+          </p>
+          <ul style="list-style-type: none; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li><strong style="color: var(--accent-primary);">Immutable:</strong> Bringing mainstream-ready titles to the forefront and exploring the potential of true digital ownership.</li>
+            <li><strong style="color: var(--accent-primary);">Kronicles:</strong> Diving into the newest updates and providing first-hand insights as an official creator.</li>
+            <li><strong style="color: var(--accent-primary);">YGG:</strong> Connecting with the world's largest gaming guild to empower players across the globe.</li>
+          </ul>
+
+          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem;">The Content Pillars: Tactics, Crafting, and "The Grind"</h3>
+          <p>
+            My community knows me for more than just gameplay. I focus on the holistic gaming experience:
+          </p>
+          <ul style="list-style-type: none; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.8rem;">
+            <li><strong style="color: var(--accent-primary);">Tactical Breakdowns:</strong> Mastering the Combatant and Duelist ranks with optimized team compositions.</li>
+            <li><strong style="color: var(--accent-primary);">The Economy:</strong> Deconstructing crafting loops, hunting for rare materials, and explaining the value of gems and gear.</li>
+            <li><strong style="color: var(--accent-primary);">First Impressions:</strong> Cutting through the noise to tell you what’s actually worth your time, from Elowyn: Quest of Time to Goblins of Elderstone.</li>
+            <li><strong style="color: var(--accent-primary);">The Aesthetic:</strong> Every piece of content is wrapped in a signature anime-style branding, bridging the gap between traditional gaming culture and the Web3 frontier.</li>
+          </ul>
+
+          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem;">Documenting the Frontier</h3>
+          <p>
+            From tracking the latest updates from Rekt Games to exploring the narrative depths of Goblins of Elderstone, my journey is about more than just numbers. It’s about documenting a shift in how we play, own, and interact with digital worlds.
+          </p>
+          <p>
+            The last 8 months have been a whirlwind of campaigns, content, and community building. If this is what the first year looks like, the next chapter is going to be legendary. By merging sharp analysis with high-quality visual storytelling, I am setting the standard for what a Web3 content creator should be. Join the vanguard.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bitmoji Avatars (Top, Middle, Bottom) -->
+      <div class="article-avatar" style="flex: 0.8; display: flex; flex-direction: column; justify-content: space-between; gap: 4rem; position: relative;">
+        
+        <!-- Top: Welcoming / Introducing -->
+        <img src="assets/creator-pfp-top.jpg" alt="Mendouksai 3D Bitmoji Welcoming" style="width: 100%; max-width: 350px; margin: 0 auto; border-radius: 20px; border: 2px solid var(--accent-primary); box-shadow: 0 0 50px rgba(176,38,255,0.2); animation: float 5s infinite ease-in-out;">
+        
+        <!-- Middle: Pointing with Coffee (from before) -->
+        <img src="assets/creator-pfp.jpg" alt="Mendouksai 3D Bitmoji Pointing" style="width: 100%; max-width: 350px; margin: 0 auto; border-radius: 20px; border: 2px solid var(--accent-primary); box-shadow: 0 0 50px rgba(176,38,255,0.4); animation: float 6s infinite ease-in-out reverse;">
+        
+        <!-- Bottom: Victorious / Hyped -->
+        <img src="assets/creator-pfp-bot.jpg" alt="Mendouksai 3D Bitmoji Victorious" style="width: 100%; max-width: 350px; margin: 0 auto; border-radius: 20px; border: 2px solid var(--accent-primary); box-shadow: 0 0 50px rgba(176,38,255,0.6); animation: float 4s infinite ease-in-out;">
+        
+      </div>
+    </section>
+
+    <!-- Testimonial Slider containing Native Authenticated Tweets -->
+    <section class="slider-section">
+      <h2 style="font-size: 2.5rem; color: #fff; margin-bottom: 1rem;">The Impact</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem;">Authentic metrics, real engagement. Tap any tweet to view it live on X.</p>
+      
+      <div class="slider-container">
+        <div class="slider-track" id="tweetTrack">
+          
+          <div class="slide active">
+            <div class="slide-content-wrapper">
+              <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/mendouksaiiii_/status/2032819761449476490"></a></blockquote>
+            </div>
+          </div>
+          
+          <div class="slide">
+            <div class="slide-content-wrapper">
+              <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/mendouksaiiii_/status/2024220827818885593"></a></blockquote>
+            </div>
+          </div>
+          
+          <div class="slide">
+            <div class="slide-content-wrapper">
+              <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/mendouksaiiii_/status/2019326848769872107"></a></blockquote>
+            </div>
+          </div>
+          
+          <div class="slide">
+            <div class="slide-content-wrapper">
+              <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/mendouksaiiii_/status/2011547622927188448"></a></blockquote>
+            </div>
+          </div>
+          
+          <div class="slide">
+            <div class="slide-content-wrapper">
+              <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/mendouksaiiii_/status/1996994332440551830"></a></blockquote>
+            </div>
+          </div>
+          
+          <div class="slide">
+            <div class="slide-content-wrapper">
+              <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/mendouksaiiii_/status/1993843108119711749"></a></blockquote>
+            </div>
+          </div>
+          
+          <div class="slide">
+            <div class="slide-content-wrapper">
+              <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/mendouksaiiii_/status/1962960837930316006"></a></blockquote>
+            </div>
+          </div>
+          
+          <div class="slide">
+            <div class="slide-content-wrapper">
+              <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/mendouksaiiii_/status/1956108909397029162"></a></blockquote>
+            </div>
+          </div>
+          
+          <div class="slide">
+            <div class="slide-content-wrapper">
+              <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/mendouksaiiii_/status/1953078124234584461"></a></blockquote>
+            </div>
+          </div>
+          
+          <div class="slide">
+            <div class="slide-content-wrapper">
+              <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/mendouksaiiii_/status/1966089798868730318"></a></blockquote>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button class="slider-arrow" id="prevBtn">&#8592;</button>
+        <button class="slider-arrow" id="nextBtn">&#8594;</button>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Floating Virtual Assistant Bitmoji -->
+  <div style="position: fixed; bottom: 30px; right: 30px; z-index: 1000; animation: float 5s infinite ease-in-out;" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <img src="assets/creator-pfp-tiny.jpg" alt="Agent Mendouksai" class="anim-pulse" style="width: 65px; height: 65px; border-radius: 50%; border: 3px solid var(--cyan); box-shadow: 0 0 20px rgba(0,240,255,0.5); cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Mendouksai Network is Online - Scroll to Top">
+  </div>
+  
+  <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.getElementById('tweetTrack');
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const nextBtn = document.getElementById('nextBtn');
+      const prevBtn = document.getElementById('prevBtn');
+      
+      let currentIndex = 0;
+      let timer;
+      
+      function updateSlider() {
+        slides.forEach((slide, idx) => {
+          slide.className = 'slide'; // Reset all classes
+          if (idx === currentIndex) {
+            slide.classList.add('active');
+          } else if (idx === currentIndex - 1 || (currentIndex === 0 && idx === slides.length - 1)) {
+            slide.classList.add('prev');
+            slide.onclick = runPrev;
+          } else if (idx === currentIndex + 1 || (currentIndex === slides.length - 1 && idx === 0)) {
+            slide.classList.add('next');
+            slide.onclick = runNext;
+          }
+        });
+      }
+      
+      function runNext() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+        resetTimer();
+      }
+      
+      function runPrev() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider();
+        resetTimer();
+      }
+      
+      nextBtn.addEventListener('click', runNext);
+      prevBtn.addEventListener('click', runPrev);
+      
+      function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(runNext, 4000); // Autoscroll every 4 seconds
+      }
+      
+      // Initialize layout and timer
+      updateSlider();
+      resetTimer();
+      
+      // Pause animation if user is hovering over the slider (e.g. to interact with tweets)
+      track.addEventListener('mouseenter', () => clearInterval(timer));
+      track.addEventListener('mouseleave', resetTimer);
+    });
+  </script>
+</body>
+</html>
