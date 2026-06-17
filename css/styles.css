@@ -6,6 +6,7 @@
   --text-secondary: #cccccc;
   --accent-primary: #b026ff; /* Electric Purple */
   --accent-secondary: #00f0ff; /* Cyan */
+  --cyan: #00f0ff; /* Alias used throughout markup */
   --glass-border: rgba(176, 38, 255, 0.2);
 }
 
@@ -393,4 +394,52 @@ body {
 @keyframes neon-pulse {
   0% { box-shadow: 0 0 10px rgba(176,38,255,0.2); border-color: rgba(176,38,255,0.3); }
   100% { box-shadow: 0 0 40px rgba(0,240,255,0.6); border-color: rgba(0,240,255,0.8); }
+}
+
+/* Floating animation referenced across all pages */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+/* Hero avatar (index) */
+.hero-pfp {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-primary);
+  box-shadow: 0 0 30px rgba(176, 38, 255, 0.45);
+  margin-bottom: 2rem;
+  animation: float 6s infinite ease-in-out;
+}
+
+/* Accent word inside headings */
+.highlight {
+  background: linear-gradient(135deg, var(--cyan), var(--accent-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(0, 240, 255, 0.25);
+}
+
+/* Section/page subtitles */
+.page-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
