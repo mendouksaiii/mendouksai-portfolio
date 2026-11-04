@@ -3,73 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creator Journey | Mendouksai</title>
-  <meta name="description" content="The Web3 Vanguard: how Mendouksai reshaped the gaming narrative in 8 months — 1.2M+ views, partnered with Immutable, Kronicles, and YGG.">
-  <meta name="author" content="Mendouksai">
-  <meta name="theme-color" content="#0c0c0c">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="canonical" href="https://mendouksai.vercel.app/web3-creator.html">
-  <!-- Open Graph / social cards -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Creator Journey | Mendouksai">
-  <meta property="og:description" content="1.2M+ views in 8 months. Web3 gaming deep-dives, tactical breakdowns, and viral mindshare — partnered with Immutable, Kronicles, and YGG.">
-  <meta property="og:url" content="https://mendouksai.vercel.app/web3-creator.html">
-  <meta property="og:image" content="https://mendouksai.vercel.app/assets/pfp.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@mendouksaiiii_">
-  <meta name="twitter:title" content="Creator Journey | Mendouksai">
-  <meta name="twitter:description" content="1.2M+ views in 8 months. Web3 gaming deep-dives and viral mindshare.">
-  <meta name="twitter:image" content="https://mendouksai.vercel.app/assets/pfp.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <title>Creator Journey & Ecosystem Leadership | Mendouksai</title>
+  <meta name="description" content="1.2M+ Organic Views, Official Partnerships with Immutable, YGG, Kronicles, and Rekt Games. Documenting the shift in decentralized gaming paradigms.">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/jpeg" href="assets/pfp.jpg">
   <style>
-    /* Article Section from Previous Step */
-    .article-section {
-      background: rgba(176, 38, 255, 0.03);
-      border: 1px solid rgba(176, 38, 255, 0.1);
-      border-radius: 20px;
-      padding: 4rem;
-      margin-bottom: 5rem;
-      position: relative;
-    }
-    .article-section::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; width: 5px; height: 100%;
-      background: var(--accent-primary);
-      border-radius: 20px 0 0 20px;
-    }
-    .article-title {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-      color: #fff;
-    }
-    .article-body {
-      color: var(--text-secondary);
-      font-size: 1.15rem;
-      line-height: 1.8;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    /* Advanced 3D Coverflow Slider UI for Twitter Embeds */
+    /* Specific 3D Coverflow Styles for Creator Page */
     .slider-section {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 5rem;
+      margin-top: 4rem;
       width: 100%;
-      perspective: 1500px;
+      perspective: 1400px;
     }
     
     .slider-container {
       position: relative;
       width: 100%;
-      height: 600px; /* Accommodate tall embedded tweets */
+      height: 480px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -88,8 +40,8 @@
     
     .slide {
       position: absolute;
-      width: 350px;
-      transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      width: 360px;
+      transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
       opacity: 0;
       pointer-events: none;
       z-index: 0;
@@ -107,7 +59,7 @@
       opacity: 0.5;
       pointer-events: auto;
       z-index: 2;
-      transform: translateX(-70%) scale(0.85) rotateY(25deg);
+      transform: translateX(-65%) scale(0.85) rotateY(20deg);
       cursor: pointer;
     }
     
@@ -115,403 +67,444 @@
       opacity: 0.5;
       pointer-events: auto;
       z-index: 2;
-      transform: translateX(70%) scale(0.85) rotateY(-25deg);
+      transform: translateX(65%) scale(0.85) rotateY(-20deg);
       cursor: pointer;
     }
 
-    /* Mobile handling for 3D slider */
     @media (max-width: 768px) {
       .slide { width: 300px; }
-      .slide.prev { transform: translateX(-30%) scale(0.8) rotateY(15deg); opacity: 0.2; pointer-events: none; }
-      .slide.next { transform: translateX(30%) scale(0.8) rotateY(-15deg); opacity: 0.2; pointer-events: none; }
+      .slide.prev { transform: translateX(-35%) scale(0.8) rotateY(15deg); opacity: 0.25; }
+      .slide.next { transform: translateX(35%) scale(0.8) rotateY(-15deg); opacity: 0.25; }
     }
     
-    .slide-content-wrapper {
-      width: 100%;
-      height: 100%;
-      max-height: 550px;
-      overflow-y: auto;
-      background: var(--bg-card);
-      border-radius: 20px;
-      padding: 1rem;
-      border: 2px solid transparent;
-      box-shadow: 0 0 20px rgba(0,0,0,0.8);
-      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    .tweet-card-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      cursor: pointer;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
     }
     
-    /* Custom Scrollbar for inner tweets */
-    .slide-content-wrapper::-webkit-scrollbar { width: 5px; }
-    .slide-content-wrapper::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 10px; }
+    .slide.active .tweet-card-box {
+      border-color: var(--cyan-primary);
+      box-shadow: 0 0 35px var(--cyan-glow);
+    }
 
-    .slide.active .slide-content-wrapper {
-      border-color: var(--cyan);
-      box-shadow: 0 0 50px rgba(0, 240, 255, 0.3);
-    }
-    
-    .slider-controls {
+    .tweet-header {
       display: flex;
       align-items: center;
-      gap: 3rem;
-      margin-top: 2rem;
+      gap: 0.85rem;
+    }
+
+    .tweet-avatar-sm {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid var(--cyan-primary);
+      object-fit: cover;
+    }
+
+    .tweet-user strong {
+      color: var(--text-main);
+      font-size: 0.95rem;
+      display: block;
+    }
+
+    .tweet-user span {
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      font-size: 0.76rem;
+    }
+
+    .tweet-x-icon {
+      margin-left: auto;
+      color: var(--text-dim);
+    }
+
+    .tweet-body {
+      color: var(--text-main);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .tweet-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--cyan-primary);
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .slider-nav-arrows {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
       z-index: 10;
     }
-    
-    .slider-arrow {
-      background: rgba(0, 240, 255, 0.05);
-      color: var(--cyan);
-      border: 1px solid var(--cyan);
-      width: 60px;
-      height: 60px;
+
+    .slider-arrow-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      color: var(--cyan-primary);
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 1.8rem;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(5px);
-    }
-    
-    .slider-arrow:hover {
-      background: var(--cyan);
-      color: #000;
-      box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
-      transform: scale(1.15) rotate(10deg);
+      transition: all var(--transition-fast);
     }
 
-    /* Lightweight Tweet Card Styles */
-    .tweet-card-link {
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      cursor: pointer;
-    }
-    .tweet-card-header {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-    .tweet-avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      border: 2px solid var(--accent-primary);
-      object-fit: cover;
-    }
-    .tweet-x-badge {
-      margin-left: auto;
-      font-size: 1.6rem;
-      color: #fff;
-      opacity: 0.6;
-    }
-    .tweet-card-body {
-      color: #e0e0e0;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin: 0;
-    }
-    .tweet-card-footer {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      color: var(--cyan);
-      padding-top: 0.8rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .tweet-card-link:hover {
-      transform: translateY(-2px);
-    }
-    .tweet-card-link:hover .tweet-card-footer span:last-child {
-      text-decoration: underline;
+    .slider-arrow-btn:hover {
+      background: var(--cyan-dim);
+      border-color: var(--cyan-primary);
+      box-shadow: 0 0 16px var(--cyan-glow);
     }
   </style>
 </head>
 <body>
-  <div class="bg-gradient"></div>
 
-  <nav class="navbar">
-    <div class="logo">Mendouksai<span>.</span></div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="web3-creator.html" class="active">Creator</a>
-      <a href="developer.html">Developer</a>
-      <a href="contact.html">Contact Us</a>
+  <!-- Ambient Dynamic Canvas -->
+  <div class="ambient-bg"></div>
+  <div class="ambient-grid"></div>
+
+  <!-- Sticky Modern Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/pfp.jpg" alt="Mendouksai Portrait" class="brand-avatar">
+        <div class="brand-text">
+          <span class="brand-title">Mendouksai<span>.</span></span>
+          <span class="brand-role">Autonomous Systems Architect</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="developer.html" class="nav-link">Developer & Architecture</a></li>
+          <li><a href="web3-creator.html" class="nav-link active">Creator Journey</a></li>
+          <li><a href="contact.html" class="nav-link">Comms Uplink</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="soundToggleBtn" class="sound-toggle-btn" aria-label="Toggle Audio Synthesizer" title="Audio Synthesizer: Active">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+        </button>
+
+        <a href="https://x.com/mendouksaiiii_" target="_blank" rel="noopener noreferrer" class="sound-toggle-btn" aria-label="𝕏 / Twitter Profile" title="Follow on 𝕏: @mendouksaiiii_">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+        </a>
+
+        <a href="contact.html" class="nav-cta">
+          <span>Uplink</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+
+        <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Open Mobile Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
     </div>
-  </nav>
+  </header>
 
-  <main class="page-container">
-    <header class="page-header">
-      <h1>Creator Journey</h1>
-      <p class="page-subtitle">Documenting the shift in gaming paradigms. Bringing transparent analysis, deep-dives, and viral mindshare to the decentralized ecosystem.</p>
-    </header>
+  <!-- Mobile Drawer -->
+  <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+    <button id="mobileDrawerClose" class="mobile-drawer-close" aria-label="Close Mobile Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <ul class="mobile-drawer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="developer.html">Developer & Architecture</a></li>
+      <li><a href="web3-creator.html" class="active">Creator Journey</a></li>
+      <li><a href="contact.html">Comms Uplink</a></li>
+    </ul>
+  </div>
 
-    <!-- Featured Written Article Section with Bitmoji Avatar -->
-    <section class="article-section" style="display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
-      
-      <!-- Article Text -->
-      <div class="article-content" style="flex: 1; min-width: 300px;">
-        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
-          <img src="assets/creator-pfp-tiny.jpg" alt="Mendouksai Headshot" style="width: 70px; height: 70px; border-radius: 50%; border: 3px solid var(--accent-primary); object-fit: cover; box-shadow: 0 0 15px rgba(176,38,255,0.6);">
-          <h2 class="article-title" style="margin-bottom: 0;">The Web3 Vanguard: How One Creator Reshaped the Gaming Narrative in 8 Months</h2>
+  <main class="container section-spacing" style="padding-top: 3.5rem;">
+    
+    <!-- Page Header -->
+    <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 4rem;">
+      <span class="section-tag">[ECOSYSTEM LEADERSHIP & MINDSHARE]</span>
+      <h1 class="section-title">The Web3 Vanguard: 1.2M+ Views in 8 Months</h1>
+      <p class="section-subtitle" style="margin: 0.85rem auto 0;">
+        Documenting the shift in gaming paradigms. Bringing transparent analysis, tokenomic deconstructions, and viral tactical depth to the decentralized gaming frontier.
+      </p>
+    </div>
+
+    <!-- Creator Narrative Feature -->
+    <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 3.5rem; margin-bottom: 5rem; box-shadow: 0 20px 50px rgba(0,0,0,0.4);">
+      <div style="display: flex; gap: 3.5rem; flex-wrap: wrap; align-items: flex-start;">
+        
+        <div style="flex: 1.4; min-width: 320px;">
+          <h2 style="font-family: var(--font-display); font-size: 2.1rem; color: var(--text-main); font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem;">
+            Why Storytelling & Narrative Are the Missing Pieces in Web3
+          </h2>
+
+          <div style="font-size: 1.02rem; line-height: 1.8; color: var(--text-muted); display: flex; flex-direction: column; gap: 1.25rem;">
+            <p>
+              Hey, I am <strong>Mendouksai</strong>. In just eight months of content creation, I reached over <strong>1.2 million organic views</strong> across X. In an industry moving at the speed of light, standing out was not an accident—it was the outcome of an uncompromising editorial voice: stripping away vaporware hype to show players what is actually fun, what is sustainable, and why true digital asset ownership matters.
+            </p>
+
+            <p>
+              As an official partner with <strong>Immutable</strong>, <strong>Yield Guild Games (YGG)</strong>, <strong>Kronicles</strong>, and <strong>Rekt Games</strong>, I’ve had front-row access to the highest-velocity development teams in the space. My role is to bridge the gap between complex whitepapers and the player grinding on the frontlines.
+            </p>
+
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: var(--text-main); margin-top: 1rem;">The 4 Core Content Pillars</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-top: 0.5rem;">
+              <div style="background: rgba(8,10,15,0.6); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--cyan-primary); font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; margin-bottom: 0.35rem;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"></polyline><line x1="13" y1="19" x2="19" y2="13"></line><line x1="16" y1="16" x2="20" y2="20"></line><line x1="19" y1="21" x2="21" y2="19"></line></svg>
+                  <span>Tactical Metas</span>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Mastering team compositions, combat mechanics, and rank climbs in titles like Calamity and Spludge Wars.</p>
+              </div>
+
+              <div style="background: rgba(8,10,15,0.6); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--emerald-primary); font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; margin-bottom: 0.35rem;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 22 2 9 6 3"></polygon></svg>
+                  <span>Crafting Economies</span>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Deconstructing token burns, rare resource loops, and secondary market value accrual for sustainable sinks.</p>
+              </div>
+
+              <div style="background: rgba(8,10,15,0.6); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--purple-primary); font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; margin-bottom: 0.35rem;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                  <span>Ecosystem Alpha</span>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">First-look analyses of major token generation events (TGEs), infrastructure launches, and protocol governance.</p>
+              </div>
+
+              <div style="background: rgba(8,10,15,0.6); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--coral-accent); font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; margin-bottom: 0.35rem;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                  <span>Visual Storytelling</span>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Wrapping high-density technical analysis in signature cyberpunk/anime aesthetics that command organic engagement.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="article-body">
-          <p>
-            Hey, I am Mendouksai. I’m a Web3 gaming creator who has amassed over 1.2 million views in just 8 months of creating. As a creator officially partnered with Immutable, Kronicles, and YGG, I’ve spent the last year proving that the future of gaming isn't just about the tech—it's about the stories we tell and the communities we build around them.
-          </p>
 
-          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem;">The 1.2 Million View Journey</h3>
-          <p>
-            In an industry that moves at the speed of light, standing out requires a mix of consistency, tactical depth, and a clear voice. Reaching over a million views in under a year wasn't an accident. It was the result of a hyper-focused strategy: breaking down the barriers of Web3 gaming to make it accessible, entertaining, and profitable for the players.
-          </p>
-          <p>
-            Whether it’s a deep dive into the 3v3 ranked matches of Calamity or navigating the high-stakes world of Spludge Wars, my content is designed to give players the "Alpha" they need while keeping the energy high.
-          </p>
-
-          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem;">Partnerships That Power the Play</h3>
-          <p>
-            My journey has been defined by the company I keep. Being a partner with giants like Immutable, Kronicles, and YGG means being at the heartbeat of the ecosystem.
-          </p>
-          <ul style="list-style-type: none; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.8rem;">
-            <li><strong style="color: var(--accent-primary);">Immutable:</strong> Bringing mainstream-ready titles to the forefront and exploring the potential of true digital ownership.</li>
-            <li><strong style="color: var(--accent-primary);">Kronicles:</strong> Diving into the newest updates and providing first-hand insights as an official creator.</li>
-            <li><strong style="color: var(--accent-primary);">YGG:</strong> Connecting with the world's largest gaming guild to empower players across the globe.</li>
-          </ul>
-
-          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem;">The Content Pillars: Tactics, Crafting, and "The Grind"</h3>
-          <p>
-            My community knows me for more than just gameplay. I focus on the holistic gaming experience:
-          </p>
-          <ul style="list-style-type: none; padding-left: 1rem; display: flex; flex-direction: column; gap: 0.8rem;">
-            <li><strong style="color: var(--accent-primary);">Tactical Breakdowns:</strong> Mastering the Combatant and Duelist ranks with optimized team compositions.</li>
-            <li><strong style="color: var(--accent-primary);">The Economy:</strong> Deconstructing crafting loops, hunting for rare materials, and explaining the value of gems and gear.</li>
-            <li><strong style="color: var(--accent-primary);">First Impressions:</strong> Cutting through the noise to tell you what’s actually worth your time, from Elowyn: Quest of Time to Goblins of Elderstone.</li>
-            <li><strong style="color: var(--accent-primary);">The Aesthetic:</strong> Every piece of content is wrapped in a signature anime-style branding, bridging the gap between traditional gaming culture and the Web3 frontier.</li>
-          </ul>
-
-          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem;">Documenting the Frontier</h3>
-          <p>
-            From tracking the latest updates from Rekt Games to exploring the narrative depths of Goblins of Elderstone, my journey is about more than just numbers. It’s about documenting a shift in how we play, own, and interact with digital worlds.
-          </p>
-          <p>
-            The last 8 months have been a whirlwind of campaigns, content, and community building. If this is what the first year looks like, the next chapter is going to be legendary. By merging sharp analysis with high-quality visual storytelling, I am setting the standard for what a Web3 content creator should be. Join the vanguard.
-          </p>
+        <div style="flex: 0.8; min-width: 280px; display: flex; flex-direction: column; gap: 1.5rem; align-items: center;">
+          <img src="assets/creator-pfp-top.jpg" alt="Mendouksai Avatar Welcoming" style="width: 100%; max-width: 320px; border-radius: var(--radius-lg); border: 2px solid var(--cyan-primary); box-shadow: 0 0 40px var(--cyan-glow);">
+          
+          <div style="width: 100%; max-width: 320px; background: rgba(8,10,15,0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase;">Channel Metrics</div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.5rem;">
+              <span style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--text-main);">1,200,000+</span>
+              <span style="color: var(--emerald-primary); font-family: var(--font-mono); font-size: 0.75rem;">Verified Organic</span>
+            </div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.4rem;">Consistent 8-month viral trajectory across Web3 gaming ecosystem threads.</div>
+          </div>
         </div>
-      </div>
 
-      <!-- Bitmoji Avatars (Top, Middle, Bottom) -->
-      <div class="article-avatar" style="flex: 0.8; display: flex; flex-direction: column; justify-content: space-between; gap: 4rem; position: relative;">
-        
-        <!-- Top: Welcoming / Introducing -->
-        <img src="assets/creator-pfp-top.jpg" alt="Mendouksai 3D Bitmoji Welcoming" style="width: 100%; max-width: 350px; margin: 0 auto; border-radius: 20px; border: 2px solid var(--accent-primary); box-shadow: 0 0 50px rgba(176,38,255,0.2); animation: float 5s infinite ease-in-out;">
-        
-        <!-- Middle: Pointing with Coffee (from before) -->
-        <img src="assets/creator-pfp.jpg" alt="Mendouksai 3D Bitmoji Pointing" style="width: 100%; max-width: 350px; margin: 0 auto; border-radius: 20px; border: 2px solid var(--accent-primary); box-shadow: 0 0 50px rgba(176,38,255,0.4); animation: float 6s infinite ease-in-out reverse;">
-        
-        <!-- Bottom: Victorious / Hyped -->
-        <img src="assets/creator-pfp-bot.jpg" alt="Mendouksai 3D Bitmoji Victorious" style="width: 100%; max-width: 350px; margin: 0 auto; border-radius: 20px; border: 2px solid var(--accent-primary); box-shadow: 0 0 50px rgba(176,38,255,0.6); animation: float 4s infinite ease-in-out;">
-        
       </div>
-    </section>
+    </article>
 
-    <!-- The Impact — Lightweight Tweet Cards (No Twitter Widget Lag) -->
+    <!-- Interactive 3D Coverflow of Viral Breakdowns -->
     <section class="slider-section">
-      <h2 style="font-size: 2.5rem; color: #fff; margin-bottom: 1rem;">The Impact</h2>
-      <p style="color: var(--text-secondary); margin-bottom: 2rem;">Authentic metrics, real engagement. Tap any card to view it live on X.</p>
-      
+      <div style="text-align: center; max-width: 600px; margin-bottom: 2rem;">
+        <span class="section-tag">[SELECTED VIRAL THREADS & ALPHA]</span>
+        <h2 class="section-title" style="font-size: 2.2rem;">Live Impact on 𝕏</h2>
+        <p class="section-subtitle" style="font-size: 0.95rem;">Tap any card to open the verified breakdown live on X.</p>
+      </div>
+
       <div class="slider-container">
         <div class="slider-track" id="tweetTrack">
           
+          <!-- Slide 1: Immutable -->
           <div class="slide active">
-            <a href="https://twitter.com/mendouksaiiii_/status/2032819761449476490" target="_blank" class="slide-content-wrapper tweet-card-link">
-              <div class="tweet-card-header">
-                <img src="assets/pfp.jpg" alt="pfp" class="tweet-avatar">
-                <div><strong style="color:#fff;">Mendouksai</strong><br><span style="color:var(--text-secondary);font-size:0.85rem;">@mendouksaiiii_</span></div>
-                <span class="tweet-x-badge">𝕏</span>
+            <a href="https://twitter.com/mendouksaiiii_/status/2032819761449476490" target="_blank" rel="noopener noreferrer" class="tweet-card-box">
+              <div class="tweet-header">
+                <img src="assets/pfp.jpg" alt="Mendouksai" class="tweet-avatar-sm">
+                <div class="tweet-user">
+                  <strong>Mendouksai</strong>
+                  <span>@mendouksaiiii_</span>
+                </div>
+                <svg class="tweet-x-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
               </div>
-              <p class="tweet-card-body">Immutable Deep Dive: Breaking Down the Next Phase 🎮🔥</p>
-              <div class="tweet-card-footer"><span>❤️ Viral Thread</span><span>🔗 View on X →</span></div>
-            </a>
-          </div>
-          
-          <div class="slide">
-            <a href="https://twitter.com/mendouksaiiii_/status/2024220827818885593" target="_blank" class="slide-content-wrapper tweet-card-link">
-              <div class="tweet-card-header">
-                <img src="assets/pfp.jpg" alt="pfp" class="tweet-avatar">
-                <div><strong style="color:#fff;">Mendouksai</strong><br><span style="color:var(--text-secondary);font-size:0.85rem;">@mendouksaiiii_</span></div>
-                <span class="tweet-x-badge">𝕏</span>
+              <p class="tweet-body">
+                Immutable Deep Dive: Breaking Down the Next Phase of Mainstream Gaming & Passport Adoption.
+              </p>
+              <div class="tweet-footer">
+                <span>Viral Thread</span>
+                <span>View on 𝕏 &rarr;</span>
               </div>
-              <p class="tweet-card-body">The YGG Ecosystem Alpha Thread — Everything You Missed 🧵</p>
-              <div class="tweet-card-footer"><span>🔥 High Engagement</span><span>🔗 View on X →</span></div>
             </a>
           </div>
 
+          <!-- Slide 2: YGG -->
           <div class="slide">
-            <a href="https://twitter.com/mendouksaiiii_/status/2019326848769872107" target="_blank" class="slide-content-wrapper tweet-card-link">
-              <div class="tweet-card-header">
-                <img src="assets/pfp.jpg" alt="pfp" class="tweet-avatar">
-                <div><strong style="color:#fff;">Mendouksai</strong><br><span style="color:var(--text-secondary);font-size:0.85rem;">@mendouksaiiii_</span></div>
-                <span class="tweet-x-badge">𝕏</span>
+            <a href="https://twitter.com/mendouksaiiii_/status/2024220827818885593" target="_blank" rel="noopener noreferrer" class="tweet-card-box">
+              <div class="tweet-header">
+                <img src="assets/pfp.jpg" alt="Mendouksai" class="tweet-avatar-sm">
+                <div class="tweet-user">
+                  <strong>Mendouksai</strong>
+                  <span>@mendouksaiiii_</span>
+                </div>
+                <svg class="tweet-x-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
               </div>
-              <p class="tweet-card-body">Calamity Ranked Breakdown — How to Dominate the Meta ⚔️</p>
-              <div class="tweet-card-footer"><span>💬 Community Thread</span><span>🔗 View on X →</span></div>
+              <p class="tweet-body">
+                The YGG Ecosystem Alpha Thread — Everything You Missed on Decentralized Guild Economies.
+              </p>
+              <div class="tweet-footer">
+                <span>Guild Ecosystem</span>
+                <span>View on 𝕏 &rarr;</span>
+              </div>
             </a>
           </div>
 
+          <!-- Slide 3: Calamity -->
           <div class="slide">
-            <a href="https://twitter.com/mendouksaiiii_/status/2011547622927188448" target="_blank" class="slide-content-wrapper tweet-card-link">
-              <div class="tweet-card-header">
-                <img src="assets/pfp.jpg" alt="pfp" class="tweet-avatar">
-                <div><strong style="color:#fff;">Mendouksai</strong><br><span style="color:var(--text-secondary);font-size:0.85rem;">@mendouksaiiii_</span></div>
-                <span class="tweet-x-badge">𝕏</span>
+            <a href="https://twitter.com/mendouksaiiii_/status/2019326848769872107" target="_blank" rel="noopener noreferrer" class="tweet-card-box">
+              <div class="tweet-header">
+                <img src="assets/pfp.jpg" alt="Mendouksai" class="tweet-avatar-sm">
+                <div class="tweet-user">
+                  <strong>Mendouksai</strong>
+                  <span>@mendouksaiiii_</span>
+                </div>
+                <svg class="tweet-x-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
               </div>
-              <p class="tweet-card-body">Kronicles Partnership Announcement 🤝 New Content Incoming</p>
-              <div class="tweet-card-footer"><span>🚀 Milestone</span><span>🔗 View on X →</span></div>
+              <p class="tweet-body">
+                Calamity Ranked Breakdown — Optimized 3v3 Compositions to Dominate the Combatant Bracket.
+              </p>
+              <div class="tweet-footer">
+                <span>Tactical Meta</span>
+                <span>View on 𝕏 &rarr;</span>
+              </div>
             </a>
           </div>
 
+          <!-- Slide 4: Kronicles -->
           <div class="slide">
-            <a href="https://twitter.com/mendouksaiiii_/status/1996994332440551830" target="_blank" class="slide-content-wrapper tweet-card-link">
-              <div class="tweet-card-header">
-                <img src="assets/pfp.jpg" alt="pfp" class="tweet-avatar">
-                <div><strong style="color:#fff;">Mendouksai</strong><br><span style="color:var(--text-secondary);font-size:0.85rem;">@mendouksaiiii_</span></div>
-                <span class="tweet-x-badge">𝕏</span>
+            <a href="https://twitter.com/mendouksaiiii_/status/2011547622927188448" target="_blank" rel="noopener noreferrer" class="tweet-card-box">
+              <div class="tweet-header">
+                <img src="assets/pfp.jpg" alt="Mendouksai" class="tweet-avatar-sm">
+                <div class="tweet-user">
+                  <strong>Mendouksai</strong>
+                  <span>@mendouksaiiii_</span>
+                </div>
+                <svg class="tweet-x-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
               </div>
-              <p class="tweet-card-body">The Crafting Economy Explained — Gems, Gear, and the Grind 💎</p>
-              <div class="tweet-card-footer"><span>📊 Analysis</span><span>🔗 View on X →</span></div>
+              <p class="tweet-body">
+                Kronicles Official Partnership Announcement — First-hand gameplay alpha incoming.
+              </p>
+              <div class="tweet-footer">
+                <span>Strategic Partner</span>
+                <span>View on 𝕏 &rarr;</span>
+              </div>
             </a>
           </div>
 
+          <!-- Slide 5: Crafting Economy -->
           <div class="slide">
-            <a href="https://twitter.com/mendouksaiiii_/status/1993843108119711749" target="_blank" class="slide-content-wrapper tweet-card-link">
-              <div class="tweet-card-header">
-                <img src="assets/pfp.jpg" alt="pfp" class="tweet-avatar">
-                <div><strong style="color:#fff;">Mendouksai</strong><br><span style="color:var(--text-secondary);font-size:0.85rem;">@mendouksaiiii_</span></div>
-                <span class="tweet-x-badge">𝕏</span>
+            <a href="https://twitter.com/mendouksaiiii_/status/1996994332440551830" target="_blank" rel="noopener noreferrer" class="tweet-card-box">
+              <div class="tweet-header">
+                <img src="assets/pfp.jpg" alt="Mendouksai" class="tweet-avatar-sm">
+                <div class="tweet-user">
+                  <strong>Mendouksai</strong>
+                  <span>@mendouksaiiii_</span>
+                </div>
+                <svg class="tweet-x-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
               </div>
-              <p class="tweet-card-body">Spludge Wars First Impressions — Is This the One? 🎯</p>
-              <div class="tweet-card-footer"><span>👀 First Look</span><span>🔗 View on X →</span></div>
+              <p class="tweet-body">
+                The Crafting Economy Explained — Gems, Gear, and the Grind: Why Sinks Matter.
+              </p>
+              <div class="tweet-footer">
+                <span>Economy Breakdown</span>
+                <span>View on 𝕏 &rarr;</span>
+              </div>
             </a>
           </div>
 
-          <div class="slide">
-            <a href="https://twitter.com/mendouksaiiii_/status/1962960837930316006" target="_blank" class="slide-content-wrapper tweet-card-link">
-              <div class="tweet-card-header">
-                <img src="assets/pfp.jpg" alt="pfp" class="tweet-avatar">
-                <div><strong style="color:#fff;">Mendouksai</strong><br><span style="color:var(--text-secondary);font-size:0.85rem;">@mendouksaiiii_</span></div>
-                <span class="tweet-x-badge">𝕏</span>
-              </div>
-              <p class="tweet-card-body">Web3 Gaming 2025/2026 Predictions — The Vanguard Thesis 🔮</p>
-              <div class="tweet-card-footer"><span>🧠 Alpha Thread</span><span>🔗 View on X →</span></div>
-            </a>
-          </div>
-
-          <div class="slide">
-            <a href="https://twitter.com/mendouksaiiii_/status/1956108909397029162" target="_blank" class="slide-content-wrapper tweet-card-link">
-              <div class="tweet-card-header">
-                <img src="assets/pfp.jpg" alt="pfp" class="tweet-avatar">
-                <div><strong style="color:#fff;">Mendouksai</strong><br><span style="color:var(--text-secondary);font-size:0.85rem;">@mendouksaiiii_</span></div>
-                <span class="tweet-x-badge">𝕏</span>
-              </div>
-              <p class="tweet-card-body">Elowyn: Quest of Time Alpha — Hidden Mechanics Revealed ✨</p>
-              <div class="tweet-card-footer"><span>🎮 Gameplay</span><span>🔗 View on X →</span></div>
-            </a>
-          </div>
-
-          <div class="slide">
-            <a href="https://twitter.com/mendouksaiiii_/status/1953078124234584461" target="_blank" class="slide-content-wrapper tweet-card-link">
-              <div class="tweet-card-header">
-                <img src="assets/pfp.jpg" alt="pfp" class="tweet-avatar">
-                <div><strong style="color:#fff;">Mendouksai</strong><br><span style="color:var(--text-secondary);font-size:0.85rem;">@mendouksaiiii_</span></div>
-                <span class="tweet-x-badge">𝕏</span>
-              </div>
-              <p class="tweet-card-body">1 Million Views Milestone — Thank You, Vanguard Community 🏆</p>
-              <div class="tweet-card-footer"><span>🎉 Milestone</span><span>🔗 View on X →</span></div>
-            </a>
-          </div>
-
-          <div class="slide">
-            <a href="https://twitter.com/mendouksaiiii_/status/1966089798868730318" target="_blank" class="slide-content-wrapper tweet-card-link">
-              <div class="tweet-card-header">
-                <img src="assets/pfp.jpg" alt="pfp" class="tweet-avatar">
-                <div><strong style="color:#fff;">Mendouksai</strong><br><span style="color:var(--text-secondary);font-size:0.85rem;">@mendouksaiiii_</span></div>
-                <span class="tweet-x-badge">𝕏</span>
-              </div>
-              <p class="tweet-card-body">Goblins of Elderstone — The Narrative You're Sleeping On 🏰</p>
-              <div class="tweet-card-footer"><span>📖 Deep Dive</span><span>🔗 View on X →</span></div>
-            </a>
-          </div>
-          
         </div>
       </div>
 
-      <div class="slider-controls">
-        <button class="slider-arrow" id="prevBtn">&#8592;</button>
-        <button class="slider-arrow" id="nextBtn">&#8594;</button>
+      <!-- Arrow Controls -->
+      <div class="slider-nav-arrows">
+        <button id="sliderPrevBtn" class="slider-arrow-btn" aria-label="Previous Slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button id="sliderNextBtn" class="slider-arrow-btn" aria-label="Next Slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
       </div>
-
     </section>
+
   </main>
 
-  <!-- Sound Toggle Button (Global) -->
-  <button id="soundToggle" title="Sound On — Click to Mute" style="
-    position: fixed; bottom: 30px; left: 30px; z-index: 1001;
-    width: 50px; height: 50px; border-radius: 50%;
-    background: rgba(0,240,255,0.08); border: 1px solid var(--cyan);
-    color: var(--cyan); font-size: 1.4rem; cursor: pointer;
-    backdrop-filter: blur(8px); transition: all 0.3s ease;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 0 15px rgba(0,240,255,0.2);
-  " onmouseover="this.style.boxShadow='0 0 25px rgba(0,240,255,0.6)'; this.style.transform='scale(1.1)';"
-     onmouseout="this.style.boxShadow='0 0 15px rgba(0,240,255,0.2)'; this.style.transform='scale(1)';">🔊</button>
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>Mendouksai<span>.</span></h4>
+          <p>Full-Stack Creative Technologist & Autonomous Systems Architect. Operating at the frontier of autonomous AI agents, smart contracts, and WebGL physics engines.</p>
+        </div>
 
-  <!-- Floating Virtual Assistant Bitmoji -->
-  <div style="position: fixed; bottom: 30px; right: 30px; z-index: 1000; animation: float 5s infinite ease-in-out;" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-    <img src="assets/creator-pfp-tiny.jpg" alt="Agent Mendouksai" class="anim-pulse" style="width: 65px; height: 65px; border-radius: 50%; border: 3px solid var(--cyan); box-shadow: 0 0 20px rgba(0,240,255,0.5); cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Scroll to Top">
-  </div>
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h5>Navigation</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="developer.html">Developer & Architecture</a></li>
+              <li><a href="web3-creator.html">Creator Journey</a></li>
+              <li><a href="contact.html">Comms Uplink</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Production Builds</h5>
+            <ul>
+              <li><a href="https://redline-rider.vercel.app" target="_blank" rel="noopener noreferrer">Redline Rider (60 FPS)</a></li>
+              <li><a href="https://m-fi-underwriter.vercel.app" target="_blank" rel="noopener noreferrer">M-Fi Underwriter</a></li>
+              <li><a href="https://walletsecure-8ilj.vercel.app/" target="_blank" rel="noopener noreferrer">WalletSecure</a></li>
+              <li><a href="https://github.com/mendouksaiii/Natural-language-policy-engine.-" target="_blank" rel="noopener noreferrer">SENTINEL (Mantle)</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Channels</h5>
+            <ul>
+              <li><a href="https://github.com/mendouksaiii" target="_blank" rel="noopener noreferrer">GitHub: @mendouksaiii</a></li>
+              <li><a href="https://x.com/mendouksaiiii_" target="_blank" rel="noopener noreferrer">𝕏: @mendouksaiiii_</a></li>
+              <li><a href="https://t.me/mendouksaiii" target="_blank" rel="noopener noreferrer">Telegram: @mendouksaiii</a></li>
+              <li><a href="mailto:mendouksaiiiix99@gmail.com">Email Direct</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Mendouksai Vanguard. Built for the Autonomous & Creative Web.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <span>AUDIENCE: 1.2M+</span>
+          <span>SYSTEM: NOMINAL</span>
+          <span>UPTIME: 99.98%</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/script.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const slides = Array.from(document.querySelectorAll('.slide'));
-      const nextBtn = document.getElementById('nextBtn');
-      const prevBtn = document.getElementById('prevBtn');
-      const track = document.getElementById('tweetTrack');
-      
-      let currentIndex = 0;
-      let timer;
-      
-      function updateSlider() {
-        slides.forEach((slide, idx) => {
-          slide.className = 'slide';
-          if (idx === currentIndex) {
-            slide.classList.add('active');
-          } else if (idx === currentIndex - 1 || (currentIndex === 0 && idx === slides.length - 1)) {
-            slide.classList.add('prev');
-            slide.onclick = runPrev;
-          } else if (idx === currentIndex + 1 || (currentIndex === slides.length - 1 && idx === 0)) {
-            slide.classList.add('next');
-            slide.onclick = runNext;
-          }
-        });
-        if (window.playSlideSound) window.playSlideSound();
-      }
-      
-      function runNext() { currentIndex = (currentIndex + 1) % slides.length; updateSlider(); resetTimer(); }
-      function runPrev() { currentIndex = (currentIndex - 1 + slides.length) % slides.length; updateSlider(); resetTimer(); }
-      
-      nextBtn.addEventListener('click', runNext);
-      prevBtn.addEventListener('click', runPrev);
-      
-      function resetTimer() { clearInterval(timer); timer = setInterval(runNext, 4000); }
-      
-      updateSlider();
-      resetTimer();
-      
-      track.addEventListener('mouseenter', () => clearInterval(timer));
-      track.addEventListener('mouseleave', resetTimer);
-    });
-  </script>
 </body>
 </html>
-

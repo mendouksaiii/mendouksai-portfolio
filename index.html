@@ -3,322 +3,938 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mendouksai | Web3 Creator &amp; Developer</title>
-  <meta name="description" content="Mendouksai — Web3 gaming creator with 1.2M+ views and autonomous AI developer. Building decentralized infrastructure and documenting the future of digital ownership.">
-  <meta name="author" content="Mendouksai">
-  <meta name="theme-color" content="#0c0c0c">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="canonical" href="https://mendouksai.vercel.app/">
-  <!-- Open Graph / social cards -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Mendouksai | Web3 Creator &amp; Developer">
-  <meta property="og:description" content="Web3 gaming creator with 1.2M+ views and autonomous AI developer. Dual-wielding content and code to reshape Web3 gaming.">
-  <meta property="og:url" content="https://mendouksai.vercel.app/">
-  <meta property="og:image" content="https://mendouksai.vercel.app/assets/pfp.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@mendouksaiiii_">
-  <meta name="twitter:title" content="Mendouksai | Web3 Creator &amp; Developer">
-  <meta name="twitter:description" content="Web3 gaming creator with 1.2M+ views and autonomous AI developer.">
-  <meta name="twitter:image" content="https://mendouksai.vercel.app/assets/pfp.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <title>Mendouksai | Autonomous Systems Architect & Creative Technologist</title>
+  <meta name="description" content="Portfolio of Mendouksai — Full-Stack Creative Technologist & Autonomous Systems Architect operating at the intersection of Autonomous AI Agents, On-Chain Protocols, and 60 FPS 3D WebGL Experiences.">
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    /* Additional Styles for the new sections */
-    .scroll-section {
-      padding: 6rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      min-height: 60vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .section-title {
-      font-size: 3rem;
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 3rem;
-      background: linear-gradient(135deg, #fff, var(--cyan));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    /* Stats/Ecosystem Banner */
-    .stats-banner {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      background: rgba(176, 38, 255, 0.05);
-      border: 1px solid rgba(0, 240, 255, 0.2);
-      border-radius: 20px;
-      padding: 3rem;
-      margin-top: 2rem;
-    }
-    .stat-item {
-      text-align: center;
-    }
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--cyan);
-      margin-bottom: 0.5rem;
-      text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
-    }
-    .stat-label {
-      color: var(--text-secondary);
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    /* Contact Form Layout */
-    .contact-container {
-      display: flex;
-      gap: 4rem;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 30px;
-      padding: 4rem;
-      border: 1px solid rgba(176, 38, 255, 0.2);
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
-      flex-wrap: wrap;
-    }
-    .contact-info {
-      flex: 1;
-      min-width: 300px;
-    }
-    .contact-info p {
-      color: var(--text-secondary);
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-    .contact-socials {
-      display: flex;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .social-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: rgba(176, 38, 255, 0.1);
-      border: 1px solid var(--accent-primary);
-      color: #fff;
-      font-size: 1.2rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    .social-btn:hover {
-      background: var(--accent-primary);
-      box-shadow: 0 0 15px var(--accent-primary);
-      transform: translateY(-5px);
-    }
-    
-    .contact-form {
-      flex: 1.5;
-      min-width: 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .form-group label {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .form-control {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 1rem 1.5rem;
-      border-radius: 10px;
-      color: #fff;
-      font-family: inherit;
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
-      outline: none;
-    }
-    .form-control:focus {
-      border-color: var(--cyan);
-      box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
-    }
-    textarea.form-control {
-      min-height: 150px;
-      resize: vertical;
-    }
-    .submit-btn {
-      background: linear-gradient(45deg, var(--accent-primary), var(--cyan));
-      border: none;
-      color: #fff;
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 10px;
-      cursor: pointer;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0, 240, 255, 0.3);
-    }
-  </style>
+  <link rel="icon" type="image/jpeg" href="assets/pfp.jpg">
 </head>
 <body>
-  <div class="bg-gradient"></div>
 
-  <nav class="navbar">
-    <div class="logo">Mendouksai<span>.</span></div>
-    <div class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="web3-creator.html">Creator</a>
-      <a href="developer.html">Developer</a>
-      <a href="contact.html">Contact Us</a>
+  <!-- Ambient Dynamic Canvas -->
+  <div class="ambient-bg"></div>
+  <div class="ambient-grid"></div>
+
+  <!-- Live Top Telemetry Ticker -->
+  <aside class="telemetry-ticker" aria-label="System status telemetry">
+    <div class="ticker-left">
+      <span class="ticker-pulse"></span>
+      <span>SYSTEM STATUS: <strong style="color: var(--emerald-primary);">OPTIMAL</strong></span>
+      <span>·</span>
+      <span>MANTLE: <strong>CHAIN 5003</strong></span>
+      <span>·</span>
+      <span>SUI: <strong>WALRUS ATTESTED</strong></span>
     </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <main class="hero">
-    <div class="hero-content">
-      <img src="assets/pfp.jpg" alt="Mendouksai PFP" class="hero-pfp">
-      <h1 class="hero-title">Entering the <span class="highlight">Vanguard.</span></h1>
-      <p class="hero-subtitle">Dual-wielding content creation and autonomous AI development to reshape Web3 gaming paradigms.</p>
+    <div class="ticker-right">
+      <span class="ticker-item">FRAME BUDGET: <strong>&lt;21MS (60 FPS)</strong></span>
+      <span class="ticker-item">ORGANIC AUDIENCE: <strong>1.2M+ IMPRESSIONS</strong></span>
+      <span class="ticker-item">COLLABORATION: <strong>OPEN</strong></span>
     </div>
+  </aside>
 
-    <!-- Intro Writeup (Replacing Links) with Bitmoji -->
-    <div class="hero-writeup" style="flex: 1; max-width: 600px; background: rgba(0,0,0,0.4); padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(176,38,255,0.2); box-shadow: 0 0 30px rgba(0,0,0,0.5); animation: slideUp 1s ease 0.2s backwards; display: flex; gap: 2rem; align-items: center;">
-      <div style="flex: 1;">
-        <h3 style="color: var(--cyan); margin-bottom: 1rem; font-size: 1.8rem;">The Duality of Web3</h3>
-        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6;">
-          I operate at the absolute limits of Web3 gaming—simultaneously engineering the decentralized infrastructure that powers autonomous economies, and documenting the cultural shift for over 1.2M+ viewers as a creator. 
-          <br><br>
-          Use the navigation menu above to explore my Developer builds or dive into my Creator journey. Alternatively, scroll down to read more about my mission and drop me a transmission.
-        </p>
+  <!-- Sticky Modern Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/pfp.jpg" alt="Mendouksai Portrait" class="brand-avatar">
+        <div class="brand-text">
+          <span class="brand-title">Mendouksai<span>.</span></span>
+          <span class="brand-role">Autonomous Systems Architect</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="developer.html" class="nav-link">Developer & Architecture</a></li>
+          <li><a href="web3-creator.html" class="nav-link">Creator Journey</a></li>
+          <li><a href="contact.html" class="nav-link">Comms Uplink</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Audio Synthesizer Toggle -->
+        <button id="soundToggleBtn" class="sound-toggle-btn" aria-label="Toggle Audio Synthesizer" title="Audio Synthesizer: Active">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+        </button>
+
+        <!-- GitHub Quick Access Link -->
+        <a href="https://github.com/mendouksaiii" target="_blank" rel="noopener noreferrer" class="sound-toggle-btn" aria-label="Mendouksai GitHub Profile" title="GitHub: @mendouksaiii">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+
+        <!-- Uplink CTA -->
+        <a href="#uplink" class="nav-cta">
+          <span>Uplink</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Open Mobile Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
-      <div style="flex: 0.8; display: flex; justify-content: center;">
-        <img src="assets/creator-pfp-landing1.jpg" alt="Mendouksai Avatar 1" style="width: 100%; max-width: 150px; border-radius: 20px; border: 2px solid var(--accent-primary); animation: float 6s infinite ease-in-out;">
-      </div>
     </div>
-  </main>
+  </header>
 
-  <!-- About / Ecosystem Section -->
-  <section class="scroll-section">
-    <h2 class="section-title">The Masterplan</h2>
-    
-    <!-- Masterplan Text with Bitmoji -->
-    <div style="display: flex; align-items: center; justify-content: center; gap: 3rem; margin: 0 auto; max-width: 900px; flex-wrap: wrap;">
-      <img src="assets/creator-pfp-top.jpg" alt="Mendouksai Avatar 2" style="width: 180px; border-radius: 20px; border: 2px solid var(--cyan); box-shadow: 0 0 30px rgba(0,240,255,0.2); animation: float 5s infinite ease-in-out reverse;">
-      
-      <div style="color: var(--text-secondary); font-size: 1.25rem; line-height: 1.8; flex: 1; min-width: 300px;">
-        <p>
-          I bridge the gap between building cutting-edge technical primitives and creating comprehensive narratives that gamers actually care about. Whether I am architecting autonomous underwriting engines for decentralized liquidity or dissecting the latest Immutable TGE on X, the goal remains the same: scaling the next generation of digital ownership. 
-        </p>
-      </div>
+  <!-- Mobile Menu Drawer -->
+  <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+    <button id="mobileDrawerClose" class="mobile-drawer-close" aria-label="Close Mobile Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <ul class="mobile-drawer-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="developer.html">Developer & Architecture</a></li>
+      <li><a href="web3-creator.html">Creator Journey</a></li>
+      <li><a href="contact.html">Comms Uplink</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="https://github.com/mendouksaiii" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="font-size: 0.85rem; justify-content: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        GitHub Profile
+      </a>
+      <a href="mailto:mendouksaiiiix99@gmail.com" class="btn-primary" style="font-size: 0.85rem; justify-content: center;">
+        Direct Email
+      </a>
     </div>
-
-    <!-- Stats Banner with Bitmoji -->
-    <div style="position: relative; margin-top: 4rem;">
-      <img src="assets/creator-pfp-bot.jpg" alt="Mendouksai Avatar 3" style="position: absolute; top: -60px; right: 2rem; width: 120px; border-radius: 50%; border: 2px solid var(--accent-primary); box-shadow: 0 0 20px rgba(176,38,255,0.4); z-index: 10; animation: float 4s infinite ease-in-out;">
-      
-      <div class="stats-banner">
-        <div class="stat-item">
-          <div class="stat-number">1.2M+</div>
-          <div class="stat-label">Organic Views</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">3+</div>
-          <div class="stat-label">Major Protocol Partnerships</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">7+</div>
-          <div class="stat-label">Production Web3 Apps</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="scroll-section" id="contact">
-    <h2 class="section-title">Let's Build Together</h2>
-    
-    <div class="contact-container">
-      <div class="contact-info">
-        <h3 style="font-size: 2rem; color: #fff; margin-bottom: 1rem;">Get In Touch</h3>
-        <p>
-          Whether you’re a studio looking to partner for a deep-dive campaign, a protocol needing robust wallet architecture, or just a fellow builder navigating the frontier—drop me a line.
-        </p>
-        
-        <img src="assets/creator-pfp.jpg" alt="Mendouksai Avatar 4" style="width: 140px; border-radius: 20px; margin-top: 1rem; border: 2px solid var(--cyan); animation: float 5s infinite ease-in-out;">
-
-        <div class="contact-socials">
-          <a href="https://x.com/mendouksaiiii_?s=21" target="_blank" rel="noopener" class="social-btn" title="X / Twitter">𝕏</a>
-          <a href="https://github.com/mendouksaiii" target="_blank" rel="noopener" class="social-btn" title="GitHub">GH</a>
-          <a href="https://t.me/mendouksaiii" target="_blank" rel="noopener" class="social-btn" title="Telegram">TG</a>
-        </div>
-      </div>
-
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('Transmission Sent to Mendouksai Network!');">
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-          <div class="form-group" style="flex: 1;">
-            <label for="name">Alias / Name</label>
-            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
-          </div>
-          <div class="form-group" style="flex: 1;">
-            <label for="email">Uplink (Email)</label>
-            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <label for="subject">Protocol / Subject</label>
-          <input type="text" id="subject" class="form-control" placeholder="What are we discussing?" required>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Transmission</label>
-          <textarea id="message" class="form-control" placeholder="Drop the alpha here..." required></textarea>
-        </div>
-
-        <button type="submit" class="submit-btn" style="margin-top: 1rem;">Transmit Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer style="text-align: center; padding: 2rem; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-secondary); margin-top: 4rem;">
-    <p>&copy; 2026 Mendouksai Vanguard. Built for the Decentralized Web.</p>
-  </footer>
-
-  <!-- Floating Virtual Assistant Bitmoji -->
-  <div style="position: fixed; bottom: 30px; right: 30px; z-index: 1000; animation: float 5s infinite ease-in-out;" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-    <img src="assets/creator-pfp-tiny.jpg" alt="Agent Mendouksai" class="anim-pulse" style="width: 65px; height: 65px; border-radius: 50%; border: 3px solid var(--cyan); box-shadow: 0 0 20px rgba(0,240,255,0.5); cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Mendouksai Network is Online - Scroll to Top">
   </div>
 
-  <!-- Sound Toggle Button -->
-  <button id="soundToggle" title="Sound On — Click to Mute" style="
-    position: fixed; bottom: 30px; left: 30px; z-index: 1001;
-    width: 50px; height: 50px; border-radius: 50%;
-    background: rgba(0,240,255,0.08); border: 1px solid var(--cyan);
-    color: var(--cyan); font-size: 1.4rem; cursor: pointer;
-    backdrop-filter: blur(8px); transition: all 0.3s ease;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 0 15px rgba(0,240,255,0.2);
-  " onmouseover="this.style.boxShadow='0 0 25px rgba(0,240,255,0.6)'; this.style.transform='scale(1.1)';"
-     onmouseout="this.style.boxShadow='0 0 15px rgba(0,240,255,0.2)'; this.style.transform='scale(1)';">🔊</button>
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Left Column -->
+          <div class="hero-left">
+            <div class="hero-status-pill">
+              <span class="pulse-indicator"></span>
+              <span>AUTONOMOUS SYSTEMS ARCHITECT & CREATIVE TECHNOLOGIST</span>
+            </div>
+
+            <h1 class="hero-headline">
+              Engineering <span class="highlight-cyan">Autonomous AI</span>, On-Chain Primitives & <span class="highlight-purple">60 FPS 3D</span> Worlds.
+            </h1>
+
+            <p class="hero-bio">
+              Bridging high-level architectural direction with deep production polish. Creator of EIP-712 cryptographic policy firewalls for autonomous agents, deterministic Rapier 3D WASM physics engines with adaptive sub-21ms budgets, and an ecosystem strategist partnering with <strong>Immutable</strong> and <strong>YGG</strong> across <strong>1.2M+ organic impressions</strong>.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#builds" class="btn-primary">
+                <span>Explore Builds</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+              <a href="developer.html" class="btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <span>System Architecture</span>
+              </a>
+              <a href="#uplink" class="btn-ghost">
+                <span>Comms Uplink</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+            </div>
+
+            <!-- Quick Metrics Strip -->
+            <div class="hero-metrics-strip">
+              <div class="metric-card">
+                <span class="metric-value cyan">1.2M+</span>
+                <span class="metric-label">Organic Impressions</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value emerald">&lt;21ms</span>
+                <span class="metric-label">Frame Budget · 60 FPS</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value purple">EIP-712</span>
+                <span class="metric-label">AI Policy Preconditions</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">2x</span>
+                <span class="metric-label">Hackathon Finalist</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Profile Card & Terminal Stream -->
+          <div class="hero-right">
+            <!-- Profile Card -->
+            <div class="profile-card">
+              <div class="profile-header">
+                <div class="profile-img-wrap">
+                  <img src="assets/pfp.jpg" alt="Mendouksai Avatar" class="profile-img">
+                  <span class="profile-badge"></span>
+                </div>
+                <div>
+                  <h2 class="profile-name">Mendouksai</h2>
+                  <div class="profile-title">Full-Stack Architect & Creator</div>
+                  <div class="profile-location">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Remote / Global</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-details-grid">
+                <div class="profile-detail-item">
+                  <span>Primary Stack</span>
+                  <strong>TypeScript · Solidity</strong>
+                </div>
+                <div class="profile-detail-item">
+                  <span>3D / WASM</span>
+                  <strong>Three.js · Rapier 3D</strong>
+                </div>
+                <div class="profile-detail-item">
+                  <span>AI Systems</span>
+                  <strong>Gemini 2.5 · Groq · Claude</strong>
+                </div>
+                <div class="profile-detail-item">
+                  <span>Protocols</span>
+                  <strong>Mantle · Sui · Somnia</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Terminal Telemetry Simulator Box -->
+            <div class="terminal-card">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="terminal-dot red"></span>
+                  <span class="terminal-dot yellow"></span>
+                  <span class="terminal-dot green"></span>
+                </div>
+                <span class="terminal-title">Live Telemetry Event Log</span>
+                <span style="font-size: 0.65rem; color: var(--emerald-primary);">FEED ACTIVE</span>
+              </div>
+              <div id="terminalTelemetryStream" class="terminal-body">
+                <div class="terminal-line">
+                  <span class="t-prefix">&gt; [INIT]</span>
+                  <span class="t-accent">Vanguard runtime loaded · Seeded mulberry32 PRNG OK</span>
+                </div>
+                <div class="terminal-line">
+                  <span class="t-prefix">&gt; [SENTINEL]</span>
+                  <span class="t-accent">EIP-712 precondition verified on Mantle Sepolia (5003)</span>
+                </div>
+                <div class="terminal-line">
+                  <span class="t-prefix">&gt; [REDLINE]</span>
+                  <span class="t-accent">Rapier 3D rigid capsules synchronized · 60.1 FPS</span>
+                </div>
+                <div class="terminal-line">
+                  <span class="t-prefix">&gt; [BANTERBOT]</span>
+                  <span class="t-warn">Multimodal visual pipeline listening on Spectrum TS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BENTO PROJECT MATRIX -->
+    <section id="builds" class="section-spacing">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">[01] PRODUCTION BUILDS & RUNTIMES</span>
+          <h2 class="section-title">Architectural Portfolio</h2>
+          <p class="section-subtitle">
+            Engineered from scratch. From autonomous EIP-712 AI governance and 60 FPS WebGL game physics to multimodal iMessage agents and decentralized underwriting protocols.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="bento-controls">
+          <button class="filter-btn active" data-filter="all">
+            <span>[00] All Builds</span>
+          </button>
+          <button class="filter-btn" data-filter="ai">
+            <span>[01] Autonomous AI & Agents</span>
+          </button>
+          <button class="filter-btn" data-filter="3d">
+            <span>[02] 3D & WebGL Engines</span>
+          </button>
+          <button class="filter-btn" data-filter="web3">
+            <span>[03] On-Chain Protocols</span>
+          </button>
+          <button class="filter-btn" data-filter="tools">
+            <span>[04] Developer Runtimes</span>
+          </button>
+        </div>
+
+        <!-- 12-Column Responsive Bento Grid -->
+        <div class="bento-grid">
+
+          <!-- CARD 1: Redline Rider (Hero Span 8) -->
+          <article class="bento-card span-8" data-category="3d tools">
+            <div class="bento-media large">
+              <img src="assets/redline-banner.png" alt="Redline Rider 3D Downhill Game Banner" loading="lazy">
+              <span class="bento-status-pill status-live">
+                <span class="ticker-pulse"></span>
+                <span>Live 60 FPS Engine · Reddit Devvit</span>
+              </span>
+            </div>
+            <div class="bento-content">
+              <div class="bento-meta">
+                <span class="bento-index">[01]</span>
+                <span class="bento-category">3D Graphics & Physics WASM</span>
+              </div>
+              <h3 class="bento-title">Redline Rider — 3D Downhill Physics Engine & Reddit App</h3>
+              <p class="bento-desc">
+                Single-file, zero-dependency 3D survival biking engine running deterministic procedural terrain generation via seeded <code>mulberry32</code> noise. Features real-time Rapier 3D rigid-body capsule physics, custom procedural GLSL <code>ShaderMaterial</code> for the Overseer Eye with animated fibrous veins, and an adaptive quality engine maintaining sub-21ms budgets for guaranteed 60 FPS. Ported to a native Reddit Devvit Web App.
+              </p>
+              <div class="bento-tags">
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Three.js</span>
+                <span class="tech-tag">Rapier 3D WASM</span>
+                <span class="tech-tag">GLSL Shaders</span>
+                <span class="tech-tag">WebAudio API</span>
+                <span class="tech-tag">Reddit Devvit</span>
+              </div>
+              <div class="bento-footer">
+                <div class="bento-links">
+                  <a href="https://redline-rider.vercel.app" target="_blank" rel="noopener noreferrer" class="link-btn">
+                    <span>Live Deployment</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                  <a href="https://github.com/mendouksaiii/downhill-rush" target="_blank" rel="noopener noreferrer" class="link-btn">
+                    <span>GitHub</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+                <button class="inspect-trigger" data-project="redline-rider">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Inspect Blueprint</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2: SENTINEL (Span 4) -->
+          <article class="bento-card span-4" data-category="ai web3">
+            <div class="bento-media">
+              <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #090e17 0%, #171026 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary); margin-top: 0.75rem; letter-spacing: 0.1em;">EIP-712 FIREWALL · MANTLE 5003</span>
+              </div>
+              <span class="bento-status-pill status-hackathon">
+                <span>Mantle Turing Hackathon</span>
+              </span>
+            </div>
+            <div class="bento-content">
+              <div class="bento-meta">
+                <span class="bento-index">[02]</span>
+                <span class="bento-category">AI Policy & Preconditions</span>
+              </div>
+              <h3 class="bento-title">SENTINEL — On-Chain AI Policy Firewall</h3>
+              <p class="bento-desc">
+                Spending governance firewall where AI decisions serve as cryptographic preconditions rather than off-chain advice. <code>SentinelVault.sol</code> releases funds only against valid single-use EIP-712 approvals, backed by an immutable <code>SentinelRegistry.sol</code> audit trail.
+              </p>
+              <div class="bento-tags">
+                <span class="tech-tag">Solidity</span>
+                <span class="tech-tag">Mantle Sepolia</span>
+                <span class="tech-tag">EIP-712</span>
+                <span class="tech-tag">Claude 3.5</span>
+                <span class="tech-tag">WebSockets</span>
+              </div>
+              <div class="bento-footer">
+                <div class="bento-links">
+                  <a href="https://github.com/mendouksaiii/Natural-language-policy-engine.-" target="_blank" rel="noopener noreferrer" class="link-btn">
+                    <span>GitHub</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+                <button class="inspect-trigger" data-project="sentinel">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Inspect</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3: M-Fi Underwriter (Span 6) -->
+          <article class="bento-card span-6" data-category="ai web3">
+            <div class="bento-media">
+              <img src="assets/mfi-cover.png" alt="M-Fi Autonomous Underwriting Bureau" loading="lazy">
+              <span class="bento-status-pill status-hackathon">
+                <span>Galáctica Hackathon Production</span>
+              </span>
+            </div>
+            <div class="bento-content">
+              <div class="bento-meta">
+                <span class="bento-index">[03]</span>
+                <span class="bento-category">Autonomous Credit & Sui/Walrus</span>
+              </div>
+              <h3 class="bento-title">M-Fi — Autonomous Credit & Underwriting Bureau</h3>
+              <p class="bento-desc">
+                Autonomous on-chain underwriting engine evaluating AI agent liquidity and counterparty risk for uncollateralized micro-lending. Powered by Groq LLaMA 3.1, Tether WDK, and Aave V3. Deployed on Sui with decentralized blob storage on Walrus and neo-modernist telemetry interfaces.
+              </p>
+              <div class="bento-tags">
+                <span class="tech-tag">Sui</span>
+                <span class="tech-tag">Walrus Protocol</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Groq LLaMA 3.1</span>
+                <span class="tech-tag">Tether WDK</span>
+              </div>
+              <div class="bento-footer">
+                <div class="bento-links">
+                  <a href="https://m-fi-underwriter.vercel.app" target="_blank" rel="noopener noreferrer" class="link-btn">
+                    <span>Live Deployment</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                  <a href="https://github.com/mendouksaiii/m-fi-underwriter" target="_blank" rel="noopener noreferrer" class="link-btn">
+                    <span>GitHub</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+                <button class="inspect-trigger" data-project="m-fi">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Inspect</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 4: Banterbot & Kite (Span 6) -->
+          <article class="bento-card span-6" data-category="ai tools">
+            <div class="bento-media">
+              <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #0f1624 0%, #1e1133 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="var(--purple-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M8 10h.01"></path><path d="M12 10h.01"></path><path d="M16 10h.01"></path></svg>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--purple-primary); margin-top: 0.75rem; letter-spacing: 0.1em;">PHOTON SPECTRUM TS · DUAL-BRAIN</span>
+              </div>
+              <span class="bento-status-pill status-production">
+                <span>Production Agent Framework</span>
+              </span>
+            </div>
+            <div class="bento-content">
+              <div class="bento-meta">
+                <span class="bento-index">[04]</span>
+                <span class="bento-category">Autonomous Agents & Vision</span>
+              </div>
+              <h3 class="bento-title">Banterbot & Kite — Multimodal iMessage Agents</h3>
+              <p class="bento-desc">
+                Production multimodal iMessage agents engineered with Photon Spectrum (<code>spectrum-ts</code>). Dual-brain failover between Google Gemini 2.5 Flash and Groq (Llama 3.3). Features native 3-dot typing bubbles, Apple tapback reactions, bubble effects, and a 3-round roast battle state machine with dual CLI/cloud runtime.
+              </p>
+              <div class="bento-tags">
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">spectrum-ts</span>
+                <span class="tech-tag">Gemini 2.5 Flash</span>
+                <span class="tech-tag">Groq LLaMA 3.3</span>
+                <span class="tech-tag">Docker / Railway</span>
+              </div>
+              <div class="bento-footer">
+                <div class="bento-links">
+                  <a href="https://github.com/mendouksaiii/banterbot" target="_blank" rel="noopener noreferrer" class="link-btn">
+                    <span>GitHub: Banterbot</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                  <a href="https://github.com/mendouksaiii/kite" target="_blank" rel="noopener noreferrer" class="link-btn">
+                    <span>GitHub: Kite</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+                <button class="inspect-trigger" data-project="banterbot">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Inspect</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 5: NOD (Span 4) -->
+          <article class="bento-card span-4" data-category="3d web3">
+            <div class="bento-media">
+              <div style="width: 100%; height: 100%; background: #07090e; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; border-bottom: 1px solid var(--border-subtle);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--emerald-primary); margin-top: 0.75rem;">CONFIDENTIAL EVM · INCO LIGHTNING</span>
+              </div>
+              <span class="bento-status-pill status-production">
+                <span>Cryptographic Descent</span>
+              </span>
+            </div>
+            <div class="bento-content">
+              <div class="bento-meta">
+                <span class="bento-index">[05]</span>
+                <span class="bento-category">3D Survival & Inco Lightning</span>
+              </div>
+              <h3 class="bento-title">NOD — Cryptographic Descent</h3>
+              <p class="bento-desc">
+                2.5D survival-horror descent through a seven-floor house built on Inco Lightning. The floors below you are cryptographically sealed until you earn them via verifiable on-chain game state proofs.
+              </p>
+              <div class="bento-tags">
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Three.js</span>
+                <span class="tech-tag">Inco Lightning</span>
+                <span class="tech-tag">Confidential EVM</span>
+              </div>
+              <div class="bento-footer">
+                <div class="bento-links">
+                  <a href="https://github.com/mendouksaiii/nod" target="_blank" rel="noopener noreferrer" class="link-btn">
+                    <span>GitHub</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+                <button class="inspect-trigger" data-project="nod">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Inspect</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 6: Voxel Souls (Span 4) -->
+          <article class="bento-card span-4" data-category="3d">
+            <div class="bento-media">
+              <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #100a1c 0%, #1c0e12 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; border-bottom: 1px solid var(--border-subtle);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--coral-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--coral-accent); margin-top: 0.75rem;">ACTION ROGUELITE · THREE.JS</span>
+              </div>
+              <span class="bento-status-pill status-production">
+                <span>Procedural Roguelite</span>
+              </span>
+            </div>
+            <div class="bento-content">
+              <div class="bento-meta">
+                <span class="bento-index">[06]</span>
+                <span class="bento-category">Procedural WebGL Engine</span>
+              </div>
+              <h3 class="bento-title">Voxel Souls: Abyss</h3>
+              <p class="bento-desc">
+                Browser-native action roguelite engine engineered with Three.js. Features procedural voxel dungeon generation, fluid combat kinematics, and custom GLSL deferred lighting passes.
+              </p>
+              <div class="bento-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Three.js</span>
+                <span class="tech-tag">GLSL Shaders</span>
+                <span class="tech-tag">Procedural Meshes</span>
+              </div>
+              <div class="bento-footer">
+                <div class="bento-links">
+                  <a href="https://github.com/mendouksaiii/voxel-souls" target="_blank" rel="noopener noreferrer" class="link-btn">
+                    <span>GitHub</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+                <button class="inspect-trigger" data-project="voxel-souls">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Inspect</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 7: Agent Wallet Runtime & WalletSecure (Span 4) -->
+          <article class="bento-card span-4" data-category="tools web3">
+            <div class="bento-media">
+              <img src="assets/ws-logo.png" alt="WalletSecure Connection Pipeline" style="object-fit: contain; padding: 2rem; background: #0a0d14;" loading="lazy">
+              <span class="bento-status-pill status-live">
+                <span>Production Pipeline</span>
+              </span>
+            </div>
+            <div class="bento-content">
+              <div class="bento-meta">
+                <span class="bento-index">[07]</span>
+                <span class="bento-category">Web3 Core Runtimes</span>
+              </div>
+              <h3 class="bento-title">Agent Wallet Runtime & WalletSecure</h3>
+              <p class="bento-desc">
+                Autonomous execution runtime enabling AI agents to sign transactions without human hand-holding. Paired with WalletSecure: a lightweight React pipeline killing cold-start connection race conditions.
+              </p>
+              <div class="bento-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Ethers.js</span>
+              </div>
+              <div class="bento-footer">
+                <div class="bento-links">
+                  <a href="https://walletsecure-8ilj.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-btn">
+                    <span>Live</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                  <a href="https://github.com/mendouksaiii/agent-wallet-runtime" target="_blank" rel="noopener noreferrer" class="link-btn">
+                    <span>GitHub</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+                <button class="inspect-trigger" data-project="awr">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Inspect</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE BLUEPRINTS PIPELINE -->
+    <section class="section-spacing" style="background: rgba(8, 10, 15, 0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">[02] ENGINEERING METHODOLOGY</span>
+          <h2 class="section-title">Architectural Pipelines</h2>
+          <p class="section-subtitle">
+            How autonomous intelligence, cryptographic invariants, and high-frame-rate rendering combine into production-grade systems.
+          </p>
+        </div>
+
+        <div class="arch-showcase-grid">
+
+          <!-- Pipeline 1: EIP-712 AI Preconditions -->
+          <div class="arch-card">
+            <div class="arch-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3>Cryptographic AI Preconditions</h3>
+            <p>
+              Moving AI out of off-chain advisory status. Plain-English policy governance is enforced by the EVM as a prerequisite to smart contract fund dispatch.
+            </p>
+            <ul class="arch-steps">
+              <li class="arch-step-item">
+                <span class="arch-step-num">01.</span>
+                <span>Plain-English policy document parsed by LLM evaluator.</span>
+              </li>
+              <li class="arch-step-item">
+                <span class="arch-step-num">02.</span>
+                <span>Single-use EIP-712 typed signature generated on approval.</span>
+              </li>
+              <li class="arch-step-item">
+                <span class="arch-step-num">03.</span>
+                <span>SentinelVault.sol validates ECDSA signature on Mantle (5003).</span>
+              </li>
+              <li class="arch-step-item">
+                <span class="arch-step-num">04.</span>
+                <span>Append-only immutable record written to SentinelRegistry.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pipeline 2: Sub-21ms 60 FPS Physics -->
+          <div class="arch-card">
+            <div class="arch-icon purple">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h3>Sub-21ms 60 FPS WebGL Engine</h3>
+            <p>
+              Deterministic procedural generation and zero-overhead Rapier 3D WASM physics with dynamic frame-budget throttling for consistent 60 FPS across devices.
+            </p>
+            <ul class="arch-steps">
+              <li class="arch-step-item">
+                <span class="arch-step-num">01.</span>
+                <span>Seeded mulberry32 PRNG builds continuous heightmaps.</span>
+              </li>
+              <li class="arch-step-item">
+                <span class="arch-step-num">02.</span>
+                <span>Rapier 3D WASM calculates rigid capsule terrain contact.</span>
+              </li>
+              <li class="arch-step-item">
+                <span class="arch-step-num">03.</span>
+                <span>Dynamic trick detection with ±80ms landing tolerance windows.</span>
+              </li>
+              <li class="arch-step-item">
+                <span class="arch-step-num">04.</span>
+                <span>Adaptive Quality profiler auto-scales shadows & LOD.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pipeline 3: Dual-Brain Agent Failover -->
+          <div class="arch-card">
+            <div class="arch-icon emerald">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3>Multimodal Dual-Brain Failover</h3>
+            <p>
+              Production agent architecture pairing high-fidelity vision models with high-throughput open-weights fallbacks to achieve 99.99% conversation availability.
+            </p>
+            <ul class="arch-steps">
+              <li class="arch-step-item">
+                <span class="arch-step-num">01.</span>
+                <span>Apple iMessage ingestion stream via Photon Spectrum TS.</span>
+              </li>
+              <li class="arch-step-item">
+                <span class="arch-step-num">02.</span>
+                <span>Primary dispatch to Google Gemini 2.5 Flash (Vision & Text).</span>
+              </li>
+              <li class="arch-step-item">
+                <span class="arch-step-num">03.</span>
+                <span>Instant sub-300ms fallback to Groq Llama 3.3 on timeout.</span>
+              </li>
+              <li class="arch-step-item">
+                <span class="arch-step-num">04.</span>
+                <span>Native typing indicators, tapbacks, and bubble effects returned.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ECOSYSTEM & OFFICIAL PARTNERSHIPS -->
+    <section class="section-spacing">
+      <div class="container">
+        
+        <div class="partners-banner">
+          <div class="partners-headline">
+            <span class="section-tag">[03] ECOSYSTEM REACH & IMPACT</span>
+            <h3>1.2M+ Views & Official Strategic Partners</h3>
+            <p>
+              Operating at the center of Web3 gaming culture, breaking down complex tokenomics and protocol mechanics for a global audience.
+            </p>
+          </div>
+
+          <div class="partners-logos-grid">
+            <div class="partner-card">
+              <div class="partner-badge">Immutable</div>
+              <div class="partner-type">Official Partner</div>
+              <p class="partner-desc">Translating mainstream-ready titles, Passport onboarding, and true digital asset ownership.</p>
+            </div>
+
+            <div class="partner-card">
+              <div class="partner-badge">YGG</div>
+              <div class="partner-type">Guild Partner</div>
+              <p class="partner-desc">Partnering with Yield Guild Games to empower player economies and decentralized guild structures.</p>
+            </div>
+
+            <div class="partner-card">
+              <div class="partner-badge">Kronicles</div>
+              <div class="partner-type">Creator Partner</div>
+              <p class="partner-desc">First-hand tactical alpha, ecosystem deep-dives, and community-driven play testing.</p>
+            </div>
+
+            <div class="partner-card">
+              <div class="partner-badge">Rekt Games</div>
+              <div class="partner-type">Ecosystem Partner</div>
+              <p class="partner-desc">Analyzing high-stakes competitive game loops, crafting economies, and Web3 esports metas.</p>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 2.5rem;">
+            <a href="web3-creator.html" class="btn-secondary" style="font-size: 0.9rem;">
+              <span>Read Creator Journey & Viral Breakdowns</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TRANSMISSION UPLINK (CONTACT SECTION) -->
+    <section id="uplink" class="section-spacing">
+      <div class="container">
+        
+        <div class="uplink-grid">
+          
+          <!-- Left: Direct Channels -->
+          <div class="uplink-left">
+            <div class="uplink-intro">
+              <span class="section-tag">[04] COMMS UPLINK</span>
+              <h3>Initiate Transmission</h3>
+              <p>
+                Whether you are architecting autonomous agent treasuries, engineering high-performance WebGL game engines, or seeking technical ecosystem leadership — direct communications are open.
+              </p>
+            </div>
+
+            <div class="channel-list">
+              
+              <!-- Email -->
+              <div class="channel-item copy-trigger" data-copy="mendouksaiiiix99@gmail.com" title="Click to copy email address">
+                <div class="channel-left-info">
+                  <div class="channel-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">Direct Email</div>
+                    <div class="channel-val">mendouksaiiiix99@gmail.com</div>
+                  </div>
+                </div>
+                <span class="copy-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  Copy
+                </span>
+              </div>
+
+              <!-- Telegram -->
+              <a href="https://t.me/mendouksaiii" target="_blank" rel="noopener noreferrer" class="channel-item">
+                <div class="channel-left-info">
+                  <div class="channel-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">Telegram Direct</div>
+                    <div class="channel-val">@mendouksaiii</div>
+                  </div>
+                </div>
+                <span class="copy-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  Open
+                </span>
+              </a>
+
+              <!-- X / Twitter -->
+              <a href="https://x.com/mendouksaiiii_" target="_blank" rel="noopener noreferrer" class="channel-item">
+                <div class="channel-left-info">
+                  <div class="channel-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">𝕏 / Twitter</div>
+                    <div class="channel-val">@mendouksaiiii_</div>
+                  </div>
+                </div>
+                <span class="copy-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  Follow
+                </span>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/mendouksaiii" target="_blank" rel="noopener noreferrer" class="channel-item">
+                <div class="channel-left-info">
+                  <div class="channel-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">GitHub Repository Matrix</div>
+                    <div class="channel-val">github.com/mendouksaiii</div>
+                  </div>
+                </div>
+                <span class="copy-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  Explore
+                </span>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Right: Interactive Form -->
+          <form id="transmissionForm" class="uplink-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="senderName" class="form-label">Identity / Alias</label>
+                <input type="text" id="senderName" class="form-input" placeholder="Your name or handle" required>
+              </div>
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">Return Uplink (Email)</label>
+                <input type="email" id="senderEmail" class="form-input" placeholder="you@organization.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="transmissionTopic" class="form-label">Protocol Domain / Subject</label>
+              <input type="text" id="transmissionTopic" class="form-input" placeholder="e.g. Autonomous Agent Architecture, 3D Engine, Partnership" required>
+            </div>
+
+            <div class="form-group">
+              <label for="transmissionBody" class="form-label">Payload Transmission</label>
+              <textarea id="transmissionBody" class="form-textarea" placeholder="Detail your project specifications, timeline, or collaborative proposition..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-btn">
+              <span>Transmit Secure Message</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>Mendouksai<span>.</span></h4>
+          <p>Full-Stack Creative Technologist & Autonomous Systems Architect. Operating at the frontier of autonomous AI agents, smart contracts, and WebGL physics engines.</p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h5>Navigation</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="developer.html">Developer & Architecture</a></li>
+              <li><a href="web3-creator.html">Creator Journey</a></li>
+              <li><a href="contact.html">Comms Uplink</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Production Builds</h5>
+            <ul>
+              <li><a href="https://redline-rider.vercel.app" target="_blank" rel="noopener noreferrer">Redline Rider (60 FPS)</a></li>
+              <li><a href="https://m-fi-underwriter.vercel.app" target="_blank" rel="noopener noreferrer">M-Fi Underwriter</a></li>
+              <li><a href="https://walletsecure-8ilj.vercel.app/" target="_blank" rel="noopener noreferrer">WalletSecure</a></li>
+              <li><a href="https://github.com/mendouksaiii/Natural-language-policy-engine.-" target="_blank" rel="noopener noreferrer">SENTINEL (Mantle)</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Channels</h5>
+            <ul>
+              <li><a href="https://github.com/mendouksaiii" target="_blank" rel="noopener noreferrer">GitHub: @mendouksaiii</a></li>
+              <li><a href="https://x.com/mendouksaiiii_" target="_blank" rel="noopener noreferrer">𝕏: @mendouksaiiii_</a></li>
+              <li><a href="https://t.me/mendouksaiii" target="_blank" rel="noopener noreferrer">Telegram: @mendouksaiii</a></li>
+              <li><a href="mailto:mendouksaiiiix99@gmail.com">Email Direct</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Mendouksai Vanguard. Built for the Autonomous & Creative Web.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <span>LATENCY: &lt;21MS</span>
+          <span>SYSTEM: NOMINAL</span>
+          <span>UPTIME: 99.98%</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Architecture Inspector Modal -->
+  <div id="projectModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Project Architecture Inspector">
+    <div id="modalBox" class="modal-box">
+      <!-- Injected by script.js -->
+    </div>
+    <button id="modalCloseBtn" class="modal-close-btn" aria-label="Close Inspector">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Toast Notice -->
+  <div id="toastNotice" class="toast-notice" role="alert">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    <span id="toastText">Action completed successfully</span>
+  </div>
 
   <script src="js/script.js"></script>
 </body>
