@@ -3,309 +3,192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comms Uplink & Direct Transmission | Mendouksai</title>
-  <meta name="description" content="Direct communications uplink with Mendouksai — Full-Stack Creative Technologist & Autonomous Systems Architect.">
+  <title>Contact | Mendouksai</title>
+  <meta name="description" content="Get in touch with Mendouksai — X, Telegram, Email, Discord, or GitHub. Protocol advisory, game engineering, and Web3 ecosystem partnerships.">
+  <meta name="author" content="Mendouksai">
+  <meta name="theme-color" content="#0c0c0c">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="canonical" href="https://mendouksai.vercel.app/contact.html">
-  <meta property="og:title" content="Comms Uplink & Direct Transmission | Mendouksai">
-  <meta property="og:description" content="Direct communications uplink with Mendouksai — Full-Stack Creative Technologist & Autonomous Systems Architect.">
-  <meta property="og:image" content="https://mendouksai.vercel.app/assets/redline-banner.png">
+  <!-- Open Graph / social cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact | Mendouksai">
+  <meta property="og:description" content="Reach Mendouksai via X, Telegram, Email, or Discord. Partnerships and Web3 collaborations welcome.">
   <meta property="og:url" content="https://mendouksai.vercel.app/contact.html">
+  <meta property="og:image" content="https://mendouksai.vercel.app/assets/pfp.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@mendouksaiiii_">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="alternate icon" href="assets/pfp.jpg">
+  <meta name="twitter:title" content="Contact | Mendouksai">
+  <meta name="twitter:description" content="Reach Mendouksai via X, Telegram, Email, or Discord.">
+  <meta name="twitter:image" content="https://mendouksai.vercel.app/assets/pfp.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-top: 4rem;
+    }
+    .platform-card {
+      text-decoration: none;
+      display: block;
+      height: 100%;
+    }
+    .platform-inner {
+      text-align: center;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 380px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(176,38,255,0.1);
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .platform-inner:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 10px 40px rgba(0, 240, 255, 0.2);
+      transform: translateY(-10px);
+    }
+    .platform-inner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 4px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--cyan));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .platform-inner:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .platform-avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid var(--accent-primary);
+      box-shadow: 0 0 20px rgba(176,38,255,0.4);
+      object-fit: cover;
+      margin-bottom: 2rem;
+      transition: transform 0.5s ease;
+    }
+    .platform-inner:hover .platform-avatar {
+      transform: scale(1.1) rotate(5deg);
+      border-color: var(--cyan);
+      box-shadow: 0 0 30px rgba(0,240,255,0.6);
+    }
+    
+    .platform-title {
+      color: #fff;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      transition: color 0.3s ease;
+    }
+    .platform-inner:hover .platform-title {
+      color: var(--cyan);
+    }
+    
+    .platform-handle {
+      color: var(--accent-primary);
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      word-break: break-all;
+    }
+    
+    .platform-desc {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
+  <div class="bg-gradient"></div>
 
-  <!-- Ambient Dynamic Canvas -->
-  <div class="ambient-bg"></div>
-  <div class="ambient-grid"></div>
+  <nav class="navbar">
+    <div class="logo">Mendouksai<span>.</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="web3-creator.html">Creator</a>
+      <a href="developer.html">Developer</a>
+      <a href="contact.html" class="active">Contact Us</a>
+    </div>
+  </nav>
 
-  <!-- Sticky Modern Navigation Bar -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-brand">
-        <img src="assets/pfp.jpg" alt="Mendouksai Portrait" class="brand-avatar">
-        <div class="brand-text">
-          <span class="brand-title">Mendouksai<span>.</span></span>
-          <span class="brand-role">Autonomous Systems Architect</span>
+  <main class="page-container">
+    <header class="page-header" style="text-align: center; margin-bottom: 2rem;">
+      <h1 style="font-size: 4rem; background: linear-gradient(135deg, #fff, var(--cyan)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Establish Uplink</h1>
+      <p class="page-subtitle" style="max-width: 600px; margin: 0 auto; margin-top: 1rem;">Choose your preferred secure channel to connect with the Mendouksai Network.</p>
+    </header>
+
+    <div class="contact-grid">
+      
+      <!-- X / Twitter -->
+      <a href="https://x.com/mendouksaiiii_" target="_blank" rel="noopener" class="platform-card">
+        <div class="card glass-card platform-inner" style="animation: slideUp 0.8s ease 0s backwards;">
+          <img src="assets/contact-x.jpg" alt="Mendouksai on X" class="platform-avatar">
+          <h3 class="platform-title">X / Twitter</h3>
+          <div class="platform-handle">@mendouksaiiii_</div>
+          <div class="platform-desc">Latest Alpha, deep-dives, and hot takes on Web3 Gaming and Autonomous AI.</div>
         </div>
       </a>
-
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="developer.html" class="nav-link">Developer & Architecture</a></li>
-          <li><a href="web3-creator.html" class="nav-link">Creator Journey</a></li>
-          <li><a href="contact.html" class="nav-link active">Comms Uplink</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions">
-        <button id="soundToggleBtn" class="sound-toggle-btn" aria-label="Toggle Audio Synthesizer" title="Audio Synthesizer: Active">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-          </svg>
-        </button>
-
-        <a href="https://github.com/mendouksaiii" target="_blank" rel="noopener noreferrer" class="sound-toggle-btn" aria-label="GitHub Profile" title="GitHub: @mendouksaiii">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-          </svg>
-        </a>
-
-        <a href="mailto:mendouksaiiiix99@gmail.com" class="nav-cta">
-          <span>Email</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-        </a>
-
-        <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Open Mobile Menu">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Drawer -->
-  <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
-    <button id="mobileDrawerClose" class="mobile-drawer-close" aria-label="Close Mobile Menu">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-    </button>
-    <ul class="mobile-drawer-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="developer.html">Developer & Architecture</a></li>
-      <li><a href="web3-creator.html">Creator Journey</a></li>
-      <li><a href="contact.html" class="active">Comms Uplink</a></li>
-    </ul>
-  </div>
-
-  <main class="container section-spacing" style="padding-top: 3.5rem;">
-    
-    <!-- Page Header -->
-    <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 4rem;">
-      <span class="section-tag">[DIRECT CHANNELS & TRANSMISSION]</span>
-      <h1 class="section-title">Comms Uplink</h1>
-      <p class="section-subtitle" style="margin: 0.85rem auto 0;">
-        Open for technical advisory, protocol architecture, game engine engineering, and ecosystem campaigns. Direct channels monitored daily.
-      </p>
-    </div>
-
-    <!-- Channels Grid (5 High-Density Cards) -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
-      
-      <!-- Email -->
-      <div class="channel-item copy-trigger" data-copy="mendouksaiiiix99@gmail.com" style="flex-direction: column; align-items: flex-start; gap: 1.25rem; padding: 2rem;">
-        <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-          <div class="channel-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          </div>
-          <span class="copy-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            Copy
-          </span>
-        </div>
-        <div>
-          <div class="channel-label">Email Direct</div>
-          <div class="channel-val" style="font-size: 0.95rem; margin-top: 0.25rem; word-break: break-all;">mendouksaiiiix99@gmail.com</div>
-        </div>
-        <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: auto;">Best for formal inquiries & protocol specs</div>
-      </div>
 
       <!-- Telegram -->
-      <a href="https://t.me/mendouksaiii" target="_blank" rel="noopener noreferrer" class="channel-item" style="flex-direction: column; align-items: flex-start; gap: 1.25rem; padding: 2rem;">
-        <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-          <div class="channel-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-          </div>
-          <span class="copy-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            Open
-          </span>
+      <a href="https://t.me/mendouksaiii" target="_blank" rel="noopener" class="platform-card">
+        <div class="card glass-card platform-inner" style="animation: slideUp 0.8s ease 0.2s backwards;">
+          <img src="assets/contact-tg.jpg" alt="Mendouksai on Telegram" class="platform-avatar">
+          <h3 class="platform-title">Telegram</h3>
+          <div class="platform-handle">@mendouksaiii</div>
+          <div class="platform-desc">Lightning fast direct communications for protocol advisory and collaborations.</div>
         </div>
-        <div>
-          <div class="channel-label">Telegram</div>
-          <div class="channel-val" style="font-size: 1.1rem; margin-top: 0.25rem;">@mendouksaiii</div>
-        </div>
-        <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: auto;">Fastest real-time response channel</div>
       </a>
 
-      <!-- X / Twitter -->
-      <a href="https://x.com/mendouksaiiii_" target="_blank" rel="noopener noreferrer" class="channel-item" style="flex-direction: column; align-items: flex-start; gap: 1.25rem; padding: 2rem;">
-        <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-          <div class="channel-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
-          </div>
-          <span class="copy-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            Follow
-          </span>
+      <!-- Email -->
+      <a href="mailto:mendouksaiiiix99@gmail.com" class="platform-card">
+        <div class="card glass-card platform-inner" style="animation: slideUp 0.8s ease 0.4s backwards;">
+          <img src="assets/contact-email.jpg" alt="Email Mendouksai" class="platform-avatar">
+          <h3 class="platform-title">Email</h3>
+          <div class="platform-handle">mendouksaiiiix99@gmail.com</div>
+          <div class="platform-desc">Formal inquiries, campaign partnerships, and architectural proposals.</div>
         </div>
-        <div>
-          <div class="channel-label">𝕏 Platform</div>
-          <div class="channel-val" style="font-size: 1.1rem; margin-top: 0.25rem;">@mendouksaiiii_</div>
-        </div>
-        <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: auto;">1.2M+ organic views & ecosystem alpha</div>
-      </a>
-
-      <!-- GitHub -->
-      <a href="https://github.com/mendouksaiii" target="_blank" rel="noopener noreferrer" class="channel-item" style="flex-direction: column; align-items: flex-start; gap: 1.25rem; padding: 2rem;">
-        <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-          <div class="channel-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          </div>
-          <span class="copy-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            Explore
-          </span>
-        </div>
-        <div>
-          <div class="channel-label">GitHub</div>
-          <div class="channel-val" style="font-size: 1.1rem; margin-top: 0.25rem;">mendouksaiii</div>
-        </div>
-        <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: auto;">16+ public repositories & architectures</div>
       </a>
 
       <!-- Discord -->
-      <div class="channel-item copy-trigger" data-copy="Mendouksai" style="flex-direction: column; align-items: flex-start; gap: 1.25rem; padding: 2rem;">
-        <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-          <div class="channel-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6h0a14.5 14.5 0 0 0-4-1.5 9.8 9.8 0 0 0-.5 1.5 12.3 12.3 0 0 0-3 0 9.8 9.8 0 0 0-.5-1.5A14.5 14.5 0 0 0 6 6a17.2 17.2 0 0 0-2 11.5 15 15 0 0 0 4.5 2.3 10.4 10.4 0 0 0 1-1.7 8.3 8.3 0 0 1-1.6-.8l.2-.2c3.2 1.5 6.6 1.5 9.8 0l.2.2a8.3 8.3 0 0 1-1.6.8 10.4 10.4 0 0 0 1 1.7 15 15 0 0 0 4.5-2.3A17.2 17.2 0 0 0 18 6ZM9.5 14.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5Zm5 0c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5Z"></path></svg>
-          </div>
-          <span class="copy-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-            Copy
-          </span>
-        </div>
-        <div>
-          <div class="channel-label">Discord Handle</div>
-          <div class="channel-val" style="font-size: 1.1rem; margin-top: 0.25rem;">Mendouksai</div>
-        </div>
-        <div style="font-size: 0.8rem; color: var(--text-dim); margin-top: auto;">Developer rooms & gaming communities</div>
-      </div>
-
-    </div>
-
-    <!-- Transmission Form & Fingerprint -->
-    <div class="uplink-grid" style="margin-top: 2rem;">
-      
-      <div class="uplink-left">
-        <div class="uplink-intro">
-          <span class="section-tag">[SYSTEM INTEGRITY]</span>
-          <h3>Security & Operational Fingerprint</h3>
-          <p>
-            Operating with cryptographic standards across all pipelines. Verified identities, on-chain commitments, and strict security posture.
-          </p>
-        </div>
-
-        <div style="background: rgba(8,10,15,0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; font-family: var(--font-mono); font-size: 0.76rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.85rem;">
-          <div>
-            <span style="color: var(--text-dim); text-transform: uppercase;">Primary Node Key ID</span>
-            <div style="color: var(--cyan-primary); word-break: break-all; margin-top: 0.2rem;">0x712_MENDOUKSAI_VANGUARD_AUTH_2026</div>
-          </div>
-          <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.75rem;">
-            <span style="color: var(--text-dim); text-transform: uppercase;">Cryptographic Protocols</span>
-            <div style="color: var(--text-main); margin-top: 0.2rem;">EIP-712 · Mantle Sepolia (5003) · Inco Lightning</div>
-          </div>
-          <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.75rem;">
-            <span style="color: var(--text-dim); text-transform: uppercase;">Response Window</span>
-            <div style="color: var(--emerald-primary); margin-top: 0.2rem;">Within 24 Hours (Global Remote)</div>
-          </div>
+      <div class="platform-card">
+        <div class="card glass-card platform-inner" style="animation: slideUp 0.8s ease 0.6s backwards;">
+          <img src="assets/contact-discord.jpg" alt="Mendouksai on Discord" class="platform-avatar">
+          <h3 class="platform-title">Discord</h3>
+          <div class="platform-handle">Mendouksai</div>
+          <div class="platform-desc">Developer rooms, community building, and gaming sessions.</div>
         </div>
       </div>
 
-      <form id="transmissionForm" class="uplink-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="senderName" class="form-label">Identity / Alias</label>
-            <input type="text" id="senderName" class="form-input" placeholder="Your name or handle" required>
-          </div>
-          <div class="form-group">
-            <label for="senderEmail" class="form-label">Return Uplink (Email)</label>
-            <input type="email" id="senderEmail" class="form-input" placeholder="you@organization.com" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="transmissionTopic" class="form-label">Subject / Proposition</label>
-          <input type="text" id="transmissionTopic" class="form-input" placeholder="e.g. Autonomous Agent Architecture, Three.js Engine, Advisory" required>
-        </div>
-
-        <div class="form-group">
-          <label for="transmissionBody" class="form-label">Encrypted Transmission</label>
-          <textarea id="transmissionBody" class="form-textarea" placeholder="Detail your project specifications, timeline, or proposition..." required></textarea>
-        </div>
-
-        <button type="submit" class="form-submit-btn">
-          <span>Transmit Message</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-        </button>
-      </form>
-
     </div>
-
   </main>
 
-  <!-- Global Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <h4>Mendouksai<span>.</span></h4>
-          <p>Full-Stack Creative Technologist & Autonomous Systems Architect. Operating at the frontier of autonomous AI agents, smart contracts, and WebGL physics engines.</p>
-        </div>
-
-        <div class="footer-links-group">
-          <div class="footer-col">
-            <h5>Navigation</h5>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="developer.html">Developer & Architecture</a></li>
-              <li><a href="web3-creator.html">Creator Journey</a></li>
-              <li><a href="contact.html">Comms Uplink</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h5>Production Builds</h5>
-            <ul>
-              <li><a href="https://redline-rider.vercel.app" target="_blank" rel="noopener noreferrer">Redline Rider (60 FPS)</a></li>
-              <li><a href="https://m-fi-underwriter.vercel.app" target="_blank" rel="noopener noreferrer">M-Fi Underwriter</a></li>
-              <li><a href="https://walletsecure-8ilj.vercel.app/" target="_blank" rel="noopener noreferrer">WalletSecure</a></li>
-              <li><a href="https://github.com/mendouksaiii/Natural-language-policy-engine.-" target="_blank" rel="noopener noreferrer">SENTINEL (Mantle)</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h5>Channels</h5>
-            <ul>
-              <li><a href="https://github.com/mendouksaiii" target="_blank" rel="noopener noreferrer">GitHub: @mendouksaiii</a></li>
-              <li><a href="https://x.com/mendouksaiiii_" target="_blank" rel="noopener noreferrer">𝕏: @mendouksaiiii_</a></li>
-              <li><a href="https://t.me/mendouksaiii" target="_blank" rel="noopener noreferrer">Telegram: @mendouksaiii</a></li>
-              <li><a href="mailto:mendouksaiiiix99@gmail.com">Email Direct</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>&copy; 2026 Mendouksai Vanguard. Built for the Autonomous & Creative Web.</div>
-        <div style="display: flex; gap: 1.5rem;">
-          <span>COMMS: SECURE</span>
-          <span>SYSTEM: NOMINAL</span>
-          <span>UPTIME: 99.98%</span>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Toast Notice -->
-  <div id="toastNotice" class="toast-notice" role="alert">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-    <span id="toastText">Action completed successfully</span>
+  <!-- Floating Virtual Assistant Bitmoji -->
+  <div style="position: fixed; bottom: 30px; right: 30px; z-index: 1000; animation: float 5s infinite ease-in-out;" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <img src="assets/creator-pfp-tiny.jpg" alt="Agent Mendouksai" class="anim-pulse" style="width: 65px; height: 65px; border-radius: 50%; border: 3px solid var(--cyan); box-shadow: 0 0 20px rgba(0,240,255,0.5); cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Mendouksai Network is Online - Scroll to Top">
   </div>
+
+  <!-- Sound Toggle Button -->
+  <button id="soundToggle" title="Sound On — Click to Mute" style="
+    position: fixed; bottom: 30px; left: 30px; z-index: 1001;
+    width: 50px; height: 50px; border-radius: 50%;
+    background: rgba(0,240,255,0.08); border: 1px solid var(--cyan);
+    color: var(--cyan); font-size: 1.4rem; cursor: pointer;
+    backdrop-filter: blur(8px); transition: all 0.3s ease;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 15px rgba(0,240,255,0.2);
+  " onmouseover="this.style.boxShadow='0 0 25px rgba(0,240,255,0.6)'; this.style.transform='scale(1.1)';"
+     onmouseout="this.style.boxShadow='0 0 15px rgba(0,240,255,0.2)'; this.style.transform='scale(1)';">🔊</button>
 
   <script src="js/script.js"></script>
 </body>

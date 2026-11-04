@@ -3,467 +3,352 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developer & Systems Architecture | Mendouksai</title>
-  <meta name="description" content="Technical blueprints, smart contract firewalls, 60 FPS WebGL engines, and repository directory by Mendouksai.">
+  <title>Developer | Mendouksai</title>
+  <meta name="description" content="From analyst to autonomous systems architect — Mendouksai's production builds: Redline Rider, SENTINEL, M-Fi Underwriter, Banterbot, WalletSecure, NOD, and more.">
+  <meta name="author" content="Mendouksai">
+  <meta name="theme-color" content="#0c0c0c">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="canonical" href="https://mendouksai.vercel.app/developer.html">
-  <meta property="og:title" content="Developer & Systems Architecture | Mendouksai">
-  <meta property="og:description" content="Technical blueprints, smart contract firewalls, 60 FPS WebGL engines, and repository directory by Mendouksai.">
-  <meta property="og:image" content="https://mendouksai.vercel.app/assets/redline-banner.png">
+  <!-- Open Graph / social cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Developer &amp; Systems Architecture | Mendouksai">
+  <meta property="og:description" content="Production Web3 builds: on-chain AI policy firewalls, 60 FPS Three.js WASM physics engines, and autonomous agent runtimes.">
   <meta property="og:url" content="https://mendouksai.vercel.app/developer.html">
+  <meta property="og:image" content="https://mendouksai.vercel.app/assets/pfp.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@mendouksaiiii_">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="alternate icon" href="assets/pfp.jpg">
+  <meta name="twitter:title" content="Developer &amp; Systems Architecture | Mendouksai">
+  <meta name="twitter:description" content="Production Web3 builds: smart contract firewalls, 60 FPS WebGL engines, on-chain AI agents.">
+  <meta name="twitter:image" content="https://mendouksai.vercel.app/assets/pfp.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .article-section {
+      background: rgba(176, 38, 255, 0.03);
+      border: 1px solid rgba(176, 38, 255, 0.1);
+      border-radius: 20px;
+      padding: 4rem;
+      margin-bottom: 5rem;
+      position: relative;
+    }
+    .article-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 5px; height: 100%;
+      background: var(--cyan);
+      border-radius: 20px 0 0 20px;
+    }
+    .article-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+    }
+    .article-body {
+      color: var(--text-secondary);
+      font-size: 1.15rem;
+      line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .section-title {
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 3rem;
+      background: linear-gradient(135deg, #fff, var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
 <body>
+  <div class="bg-gradient"></div>
 
-  <!-- Ambient Dynamic Canvas -->
-  <div class="ambient-bg"></div>
-  <div class="ambient-grid"></div>
-
-  <!-- Sticky Modern Navigation Bar -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-brand">
-        <img src="assets/pfp.jpg" alt="Mendouksai Portrait" class="brand-avatar">
-        <div class="brand-text">
-          <span class="brand-title">Mendouksai<span>.</span></span>
-          <span class="brand-role">Autonomous Systems Architect</span>
-        </div>
-      </a>
-
-      <nav aria-label="Primary Navigation">
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="developer.html" class="nav-link active">Developer & Architecture</a></li>
-          <li><a href="web3-creator.html" class="nav-link">Creator Journey</a></li>
-          <li><a href="contact.html" class="nav-link">Comms Uplink</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions">
-        <!-- Audio Synthesizer Toggle -->
-        <button id="soundToggleBtn" class="sound-toggle-btn" aria-label="Toggle Audio Synthesizer" title="Audio Synthesizer: Active">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-          </svg>
-        </button>
-
-        <a href="https://github.com/mendouksaiii" target="_blank" rel="noopener noreferrer" class="sound-toggle-btn" aria-label="GitHub Profile" title="GitHub: @mendouksaiii">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-          </svg>
-        </a>
-
-        <a href="contact.html" class="nav-cta">
-          <span>Uplink</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-        </a>
-
-        <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Open Mobile Menu">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
-      </div>
+  <nav class="navbar">
+    <div class="logo">Mendouksai<span>.</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="web3-creator.html">Creator</a>
+      <a href="developer.html" class="active">Developer</a>
+      <a href="contact.html">Contact Us</a>
     </div>
-  </header>
+  </nav>
 
-  <!-- Mobile Drawer -->
-  <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
-    <button id="mobileDrawerClose" class="mobile-drawer-close" aria-label="Close Mobile Menu">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-    </button>
-    <ul class="mobile-drawer-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="developer.html" class="active">Developer & Architecture</a></li>
-      <li><a href="web3-creator.html">Creator Journey</a></li>
-      <li><a href="contact.html">Comms Uplink</a></li>
-    </ul>
-  </div>
+  <main class="page-container">
+    <header class="page-header">
+      <h1>Technical Architecture</h1>
+      <p class="page-subtitle">From breaking down the narrative to engineering the bedrock. Transitioning from Ecosystem Analyst to Autonomous Systems Architect.</p>
+    </header>
 
-  <main class="container section-spacing" style="padding-top: 3.5rem;">
-    
-    <!-- Page Header -->
-    <div class="section-header" style="text-align: center; max-width: 820px; margin: 0 auto 4rem;">
-      <span class="section-tag">[TECHNICAL ARCHITECTURE & SYSTEMS]</span>
-      <h1 class="section-title">From Ecosystem Analyst to Autonomous Systems Architect</h1>
-      <p class="section-subtitle" style="margin: 0.85rem auto 0;">
-        Bridging high-level game economics with the low-level bedrock. Smart contract policy firewalls, WASM physics engines running at sub-21ms budgets, and multimodal agent runtimes.
-      </p>
-    </div>
-
-    <!-- Featured Architectural Essay Section -->
-    <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 3.5rem; margin-bottom: 5rem; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.4);">
-      <div style="display: flex; gap: 3rem; flex-wrap: wrap; align-items: flex-start;">
-        
-        <div style="flex: 1.5; min-width: 320px;">
-          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.75rem;">
-            <img src="assets/creator-pfp-tiny.jpg" alt="Mendouksai Avatar" style="width: 58px; height: 58px; border-radius: 50%; border: 2px solid var(--cyan-primary); object-fit: cover;">
-            <div>
-              <h2 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--text-main); font-weight: 700;">Breaking the Code Barrier</h2>
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary);">THE TECHNICAL DIRECTOR MANIFESTO</span>
-            </div>
-          </div>
-
-          <div style="font-size: 1.02rem; line-height: 1.8; color: var(--text-muted); display: flex; flex-direction: column; gap: 1.25rem;">
-            <p>
-              For eight months, I operated directly in the Web3 narrative. Across 1.2 million impressions, I broke down game economies, explained digital ownership, and analyzed complex protocols on X. But critiquing the bedrock from the outside eventually was not enough. I kept seeing the cracks in the foundation—broken wallet connection lifecycles, off-chain agent security holes, sluggish 3D web engines—and realized I wanted to build the bedrock myself.
-            </p>
-            
-            <p style="color: var(--text-main); font-weight: 600; font-size: 1.15rem; padding-left: 1.25rem; border-left: 3px solid var(--cyan-primary); background: var(--cyan-dim); padding-top: 0.5rem; padding-bottom: 0.5rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
-              "The hottest new programming language is English. But without rigorous architectural guardrails, speed is just technical debt in disguise."
-            </p>
-
-            <p>
-              I treated modern AI co-pilots not as boilerplate generators, but as high-velocity engineering peers. I brought the systems architecture, domain knowledge, and mathematical constraints. The result was not toy demos, but production-grade software shipped in rapid succession:
-            </p>
-
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem; margin-top: 0.5rem;">
-              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                <span style="color: var(--cyan-primary); font-family: var(--font-mono); font-weight: 700;">[01]</span>
-                <span><strong style="color: var(--text-main);">SENTINEL:</strong> Moving AI decision-making out of off-chain trust loops into on-chain cryptographic preconditions using single-use EIP-712 authorizations on Mantle.</span>
-              </li>
-              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                <span style="color: var(--emerald-primary); font-family: var(--font-mono); font-weight: 700;">[02]</span>
-                <span><strong style="color: var(--text-main);">Redline Rider:</strong> High-speed 3D downhill physics with sub-21ms adaptive budgets, custom procedural GLSL shaders, and a zero-friction port to Reddit Devvit.</span>
-              </li>
-              <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                <span style="color: var(--purple-primary); font-family: var(--font-mono); font-weight: 700;">[03]</span>
-                <span><strong style="color: var(--text-main);">Banterbot & Kite:</strong> Dual-brain multimodal autonomous agents on Photon Spectrum TS with Apple iMessage native typing indicators, reactions, and automated failover.</span>
-              </li>
-            </ul>
-          </div>
+    <!-- Vibecoding Article Section -->
+    <section class="article-section" style="display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
+      <div class="article-content" style="flex: 1; min-width: 300px;">
+        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <img src="assets/creator-pfp-tiny.jpg" alt="Mendouksai Headshot" style="width: 70px; height: 70px; border-radius: 50%; border: 3px solid var(--cyan); object-fit: cover; box-shadow: 0 0 15px rgba(0,240,255,0.6);">
+          <h2 class="article-title">Breaking the Code Barrier:<br><span style="color: var(--cyan); font-size: 1.8rem; font-weight: 600;">My Transition from Analyst to Architect</span></h2>
         </div>
-
-        <div style="flex: 0.9; min-width: 280px; display: flex; flex-direction: column; gap: 1.5rem;">
-          <div style="background: rgba(8, 10, 15, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem;">
-            <h4 style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--cyan-primary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem;">Core Architectural Tenets</h4>
-            <div style="display: flex; flex-direction: column; gap: 1rem; font-size: 0.88rem; color: var(--text-muted);">
-              <div>
-                <strong style="color: var(--text-main); display: block; margin-bottom: 0.2rem;">Deterministic Execution</strong>
-                <span>All physics and procedural generation use seeded PRNGs (mulberry32) for client-server state consistency.</span>
-              </div>
-              <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.85rem;">
-                <strong style="color: var(--text-main); display: block; margin-bottom: 0.2rem;">Zero-Trust AI Preconditions</strong>
-                <span>Smart contracts verify ECDSA signatures on-chain; compromised backends cannot bypass spending limits.</span>
-              </div>
-              <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.85rem;">
-                <strong style="color: var(--text-main); display: block; margin-bottom: 0.2rem;">Sub-21ms Frame Profiling</strong>
-                <span>Real-time monitoring dynamically adjusts shadow cascades and LOD to never drop below 60 FPS on mobile.</span>
-              </div>
-            </div>
-          </div>
-
-          <div style="text-align: center; padding: 1.5rem; background: var(--bg-surface-elevated); border: 1px solid var(--border-light); border-radius: var(--radius-md);">
-            <div style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; color: var(--emerald-primary);">16+</div>
-            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; margin-top: 0.25rem;">Public GitHub Repositories Shipped</div>
-          </div>
-        </div>
-
-      </div>
-    </article>
-
-    <!-- Deep-Dive System Diagrams Section -->
-    <section class="section-spacing" style="padding-top: 0;">
-      <div class="section-header">
-        <span class="section-tag">[DEEP DIVE: PRODUCTION BLUEPRINTS]</span>
-        <h2 class="section-title">Cryptographic & Physics Architecture</h2>
-        <p class="section-subtitle">
-          Deconstructing the mechanics behind the flagship deployments.
-        </p>
-      </div>
-
-      <div style="display: flex; flex-direction: column; gap: 3rem;">
         
-        <!-- Blueprint 1: SENTINEL -->
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.5rem;">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
-            <div>
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary); text-transform: uppercase;">Mantle Sepolia · Chain 5003 · EIP-712</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--text-main); margin-top: 0.25rem;">SENTINEL: AI-Signer Cryptographic Firewall</h3>
-            </div>
-            <a href="https://github.com/mendouksaiii/Natural-language-policy-engine.-" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="font-size: 0.8rem; padding: 0.5rem 1rem;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-              View Repository
-            </a>
-          </div>
-
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem;">
-            In traditional agent setups, AI spending decisions are checked off-chain inside the agent process itself. If the process is hijacked or prompt-injected, the treasury is drained. SENTINEL decouples policy from execution: the agent proposes a transaction, an isolated evaluation node checks the plain-English policy rules, and signs a structured EIP-712 authorization. <code>SentinelVault.sol</code> enforces single-use nonces and deadline windows directly on Mantle Sepolia.
+        <div class="article-body">
+          <p>
+            For eight months, I lived inside the Web3 narrative. As a creator, I watched 1.2 million views roll in while I spent my days breaking down complex game economies, crafting loops, and tokenomic models for players. My mission was simple: explain why digital ownership matters. But eventually, just analyzing the architecture from the outside wasn't enough. I started seeing the cracks in the foundation—the friction points, the cold-start wallet failures, the clunky UI, and the unverified off-chain assumptions—and I realized I didn't just want to critique the bedrock. I wanted to build it.
+          </p>
+          <p>
+            The bottleneck for solo builders has always been the "technical tax"—the friction between high-level architectural clarity and the syntax overhead of smart contract loops and physics engines.
+          </p>
+          <p style="color: #fff; font-weight: 600; font-size: 1.4rem; padding-left: 1rem; border-left: 3px solid var(--accent-primary);">
+            That changed when I stopped writing boilerplate and started operating as a Technical Director at the speed of thought.
           </p>
 
-          <!-- ASCII / Schematic Flow -->
-          <div style="background: #080a0f; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1.5rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); overflow-x: auto; line-height: 1.6;">
-<span style="color: var(--cyan-primary);">[AGENT INTENT]</span> ──&gt; ($42 Compute Spend) ──&gt; <span style="color: var(--purple-primary);">[SENTINEL ENGINE]</span> ──(Plain English policy.txt)
-                                                  │
-                                      LLM Evaluator (Claude 3.5)
-                                                  │
-                                     [APPROVED: EIP-712 Signature]
-                                                  │
-                                                  ▼
-                       ┌──────────────────────────────────────────────┐
-                       │          Mantle Sepolia (Chain 5003)         │
-                       │                                              │
-                       │  <span style="color: var(--emerald-primary);">SentinelVault.sol</span>        <span style="color: var(--cyan-primary);">SentinelRegistry.sol</span>       │
-                       │  • Verify EIP-712 Sig     • Append-only log          │
-                       │  • Check Nonce & Deadline • Immutable audit trail   │
-                       │  • Execute Transfer       • Tamper-evident           │
-                       └──────────────────────────────────────────────┘
-          </div>
-        </div>
-
-        <!-- Blueprint 2: Redline Rider -->
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.5rem;">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
-            <div>
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--emerald-primary); text-transform: uppercase;">Three.js · Rapier 3D WASM · Reddit Devvit</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--text-main); margin-top: 0.25rem;">Redline Rider: 60 FPS Adaptive Quality Engine</h3>
-            </div>
-            <a href="https://redline-rider.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 0.8rem; padding: 0.5rem 1rem;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              Play Redline Rider
-            </a>
-          </div>
-
-          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem;">
-            Achieving sustained 60 FPS in browser 3D without dedicated hardware requires continuous profiling. Redline Rider implements a rolling 60-frame moving average timer measuring CPU step and GPU render latency. If frame times exceed 21ms for 12 consecutive frames, shadow cascades drop from 2048px to 1024px and secondary terrain LOD steps down. Custom GLSL shaders use analytic math rather than texture lookups to keep bandwidth virtually zero.
+          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.6rem;">Moving at the Speed of Thought</h3>
+          <p>
+            Treating modern AI models as engineering co-pilots isn't about automated shortcuts—it’s a paradigm shift in software architecture. It’s that flow state where the gap between your architectural intent and production-ready execution hits zero.
+          </p>
+          <p>
+            I brought the high-level system boundaries, the mathematical invariants, the aesthetic polish, and the deep Web3 domain knowledge gained from my 1.2M+ view journey. My co-pilot helped orchestrate the interface implementations, regression tests, and deployment scripts in real time.
+          </p>
+          <p>
+            Suddenly, I wasn't just a creator with a vision; I was an Autonomous Systems Architect shipping battle-tested software across multiple chains and runtimes.
           </p>
 
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;">
-            <div style="background: rgba(8,10,15,0.7); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--cyan-primary);">PROCEDURAL PRNG</span>
-              <div style="font-weight: 600; color: var(--text-main); margin-top: 0.25rem;">Seeded Mulberry32</div>
-              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.4rem;">Deterministic chunk streaming; players on the same daily seed experience identical slope angles and jumps.</p>
-            </div>
-            <div style="background: rgba(8,10,15,0.7); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--emerald-primary);">PHYSICS TIMESTEP</span>
-              <div style="font-weight: 600; color: var(--text-main); margin-top: 0.25rem;">Rapier 3D WASM (60Hz)</div>
-              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.4rem;">Sub-stepped rigid capsule collision with angular damping, trick detection, and apex hang-time multipliers.</p>
-            </div>
-            <div style="background: rgba(8,10,15,0.7); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: var(--radius-sm);">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--purple-primary);">REDDIT IN-FEED</span>
-              <div style="font-weight: 600; color: var(--text-main); margin-top: 0.25rem;">Devvit Web Container</div>
-              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.4rem;">Runs zero-install in Reddit feeds using Reddit's Redis store for instant social leaderboards.</p>
-            </div>
-          </div>
-        </div>
+          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.6rem;">The Production Suite: Solving Real-World Bottlenecks</h3>
+          <p>
+            In rapid succession, we engineered software solving the exact friction points I’d been deconstructing in my analysis:
+          </p>
 
+          <ul style="list-style-type: none; padding-left: 1rem; display: flex; flex-direction: column; gap: 1rem;">
+            <li><strong style="color: var(--cyan);">Redline Rider:</strong> Engineered an endless 3D downhill physics game in Three.js and Rapier 3D WASM, with seeded mulberry32 procedural mountains, custom GLSL fibrous iris shaders, and a sub-21ms adaptive quality budget running at guaranteed 60 FPS on desktop, mobile, and inside Reddit Devvit feeds.</li>
+            <li><strong style="color: var(--cyan);">SENTINEL (Mantle Turing Hackathon):</strong> Built an on-chain spending governance firewall where AI decisions serve as cryptographic preconditions. Single-use EIP-712 authorizations verified by <code>SentinelVault.sol</code> with immutable append-only audit logs.</li>
+            <li><strong style="color: var(--cyan);">M-Fi Underwriter (Galáctica Hackathon):</strong> Developed an autonomous on-chain underwriting engine evaluating AI agent liquidity and counterparty risk powered by Groq LLaMA 3.1, Tether WDK, and Aave V3 on Sui and Walrus.</li>
+            <li><strong style="color: var(--cyan);">Banterbot &amp; Kite:</strong> Multimodal autonomous iMessage agents engineered on Photon Spectrum (<code>spectrum-ts</code>), pairing Google Gemini 2.5 Flash with instant Groq failover, native 3-dot typing indicators, and 3-round roast battles.</li>
+            <li><strong style="color: var(--cyan);">WalletSecure &amp; Agent Wallet Runtime:</strong> Built a lightweight React connection pipeline killing cold-start race conditions in Web3 dApps, paired with a Node.js runtime allowing autonomous agents to sign transactions without human hand-holding.</li>
+            <li><strong style="color: var(--cyan);">NOD:</strong> Built a 2.5D survival-horror descent through a seven-floor house on Inco Lightning, where floors below you are cryptographically sealed until earned through verifiable on-chain game state proofs.</li>
+          </ul>
+
+          <h3 style="color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.6rem;">The New Standard</h3>
+          <p>
+            What this journey proves is that traditional barriers to decentralized engineering have officially evolved. When you direct the logic, enforce cryptographic preconditions, and obsess over frame budgets, you realize that English is the most expressive architecture language on earth.
+          </p>
+          <p>
+            The last eight months established the narrative and built the community. This chapter is about engineering the foundation we've all been waiting for. Welcome to the vanguard.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bitmoji Avatar Stack -->
+      <div class="article-avatar" style="flex: 0.7; display: flex; flex-direction: column; justify-content: space-around; gap: 4rem; position: relative;">
+        <img src="assets/creator-pfp-landing1.jpg" alt="Mendouksai 3D Architect" style="width: 100%; max-width: 320px; margin: 0 auto; border-radius: 20px; border: 2px solid var(--cyan); box-shadow: 0 0 50px rgba(0,240,255,0.3); animation: float 6s infinite ease-in-out;">
+        <img src="assets/creator-pfp.jpg" alt="Mendouksai 3D Builder" style="width: 100%; max-width: 320px; margin: 0 auto; border-radius: 20px; border: 2px solid var(--accent-primary); box-shadow: 0 0 50px rgba(176,38,255,0.3); animation: float 5s infinite ease-in-out reverse;">
       </div>
     </section>
 
-    <!-- Complete GitHub Public Repositories Directory -->
-    <section class="section-spacing" style="padding-top: 0;">
-      <div class="section-header">
-        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
-          <div>
-            <span class="section-tag">[GITHUB REPOSITORY DIRECTORY]</span>
-            <h2 class="section-title">Public Repositories</h2>
-            <p class="section-subtitle">Direct index of open-source architectures, smart contracts, and game builds on github.com/mendouksaiii.</p>
-          </div>
-          <a href="https://github.com/mendouksaiii?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="font-size: 0.85rem;">
-            <span>Open GitHub Repos</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-          </a>
-        </div>
-      </div>
+    <!-- Portfolio Grid -->
+    <h2 class="section-title" id="builds">Production Builds</h2>
+    <section class="portfolio-grid">
 
-      <!-- Repositories Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 1.5rem;">
-        
-        <!-- Repo 1: voxel-souls -->
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <a href="https://github.com/mendouksaiii/voxel-souls" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--cyan-primary); text-decoration: none;">voxel-souls</a>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">JavaScript</span>
-          </div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex: 1;">
-            Voxel Souls: Chronicles of the Abyss — AAA Action Roguelite built with Three.js, procedural mesh generation, and custom GLSL lighting passes.
+      <!-- Redline Rider -->
+      <article class="port-card">
+        <div class="port-img" style="background: rgba(0,0,0,0.6) url('assets/redline-banner.png') center/cover no-repeat; padding: 2rem;"></div>
+        <div class="port-content">
+          <h3>Redline Rider</h3>
+          <p>
+            Endless 3D downhill biking game with Rapier 3D WASM physics and Three.js. Seeded mulberry32 procedural mountains, custom GLSL Overseer eye shaders, and sub-21ms budgets for sustained 60 FPS in-feed on Reddit Devvit.
           </p>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">
-            <span>3D Roguelite</span>
-            <a href="https://github.com/mendouksaiii/voxel-souls" target="_blank" rel="noopener noreferrer" style="color: var(--cyan-primary); text-decoration: none;">View Code &rarr;</a>
-          </div>
         </div>
+        <div class="port-hover-overlay">
+          <a href="https://redline-rider.vercel.app" target="_blank" rel="noopener" class="view-btn">Play Game (60 FPS)</a>
+        </div>
+      </article>
 
-        <!-- Repo 2: banterbot -->
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <a href="https://github.com/mendouksaiii/banterbot" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--cyan-primary); text-decoration: none;">banterbot</a>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">TypeScript</span>
-          </div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex: 1;">
-            Multimodal iMessage agent with 3-round roast battles, photo critiques, and Google Gemini 2.5 Flash + Groq fallback using Photon Spectrum TS.
+      <!-- SENTINEL -->
+      <article class="port-card">
+        <div class="port-img" style="background: linear-gradient(135deg, rgba(0,240,255,0.2), rgba(176,38,255,0.25)); display: flex; align-items: center; justify-content: center; padding: 2rem;">
+          <span style="font-size: 2.2rem; font-weight: 800; letter-spacing: 1px; background: linear-gradient(135deg, #fff, var(--cyan)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">SENTINEL</span>
+        </div>
+        <div class="port-content">
+          <h3>SENTINEL (Mantle Firewall)</h3>
+          <p>
+            On-chain AI policy firewall built for the Mantle Turing Hackathon. AI decisions serve as cryptographic preconditions—SentinelVault releases funds only with valid single-use EIP-712 authorizations on Chain 5003.
           </p>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">
-            <span>iMessage / AI</span>
-            <a href="https://github.com/mendouksaiii/banterbot" target="_blank" rel="noopener noreferrer" style="color: var(--cyan-primary); text-decoration: none;">View Code &rarr;</a>
-          </div>
         </div>
+        <div class="port-hover-overlay">
+          <a href="https://github.com/mendouksaiii/Natural-language-policy-engine.-" target="_blank" rel="noopener" class="view-btn">View Repository</a>
+        </div>
+      </article>
 
-        <!-- Repo 3: downhill-rush -->
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <a href="https://github.com/mendouksaiii/downhill-rush" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--cyan-primary); text-decoration: none;">downhill-rush</a>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">HTML / JS</span>
-          </div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex: 1;">
-            Redline Rider engine: Endless downhill biking game running deterministic Rapier 3D physics and sub-21ms adaptive quality budgets.
+      <!-- M-Fi -->
+      <article class="port-card">
+        <div class="port-img" style="background: rgba(0,0,0,0.6) url('assets/mfi-logo.png') center/contain no-repeat; padding: 2rem;"></div>
+        <div class="port-content">
+          <h3>M-Fi Underwriter</h3>
+          <p>
+            Autonomous liquidity and credit evaluation engine engineered for the Galáctica Hackathon. Powered by Groq LLaMA 3.1, Tether WDK, and Aave V3 on Sui and Walrus to underwrite agent risk on-chain.
           </p>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">
-            <span>Three.js / WASM</span>
-            <a href="https://github.com/mendouksaiii/downhill-rush" target="_blank" rel="noopener noreferrer" style="color: var(--cyan-primary); text-decoration: none;">View Code &rarr;</a>
-          </div>
         </div>
+        <div class="port-hover-overlay">
+          <a href="https://m-fi-underwriter.vercel.app" target="_blank" rel="noopener" class="view-btn">View Deployment</a>
+        </div>
+      </article>
 
-        <!-- Repo 4: nod -->
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <a href="https://github.com/mendouksaiii/nod" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--cyan-primary); text-decoration: none;">nod</a>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">TypeScript</span>
-          </div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex: 1;">
-            NOD — 2.5D survival-horror descent through a seven-floor house built on Inco Lightning with cryptographically sealed floors and confidential EVM state.
+      <!-- Banterbot & Kite -->
+      <article class="port-card">
+        <div class="port-img" style="background: linear-gradient(135deg, rgba(176,38,255,0.25), rgba(0,240,255,0.2)); display: flex; align-items: center; justify-content: center; padding: 2rem;">
+          <span style="font-size: 2rem; font-weight: 800; letter-spacing: 1px; background: linear-gradient(135deg, #fff, var(--accent-primary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Banterbot</span>
+        </div>
+        <div class="port-content">
+          <h3>Banterbot &amp; Kite</h3>
+          <p>
+            Multimodal autonomous iMessage agents engineered on Photon Spectrum TS. Features dual-brain Gemini 2.5 Flash + Groq fallback, native Apple 3-dot typing indicators, and 3-round roast battles with persistent scoring.
           </p>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">
-            <span>Inco Lightning</span>
-            <a href="https://github.com/mendouksaiii/nod" target="_blank" rel="noopener noreferrer" style="color: var(--cyan-primary); text-decoration: none;">View Code &rarr;</a>
-          </div>
         </div>
+        <div class="port-hover-overlay">
+          <a href="https://github.com/mendouksaiii/banterbot" target="_blank" rel="noopener" class="view-btn">View Repository</a>
+        </div>
+      </article>
 
-        <!-- Repo 5: Natural-language-policy-engine -->
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <a href="https://github.com/mendouksaiii/Natural-language-policy-engine.-" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--cyan-primary); text-decoration: none;">Natural-language-policy-engine</a>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">Solidity / JS</span>
-          </div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex: 1;">
-            SENTINEL: On-chain AI policy firewall for Mantle Turing Hackathon. Plain-English policy enforced via single-use EIP-712 cryptographic signatures.
+      <!-- NOD -->
+      <article class="port-card">
+        <div class="port-img" style="background: linear-gradient(135deg, #0d0f14, #1a1528); display: flex; align-items: center; justify-content: center; padding: 2rem;">
+          <span style="font-size: 2.2rem; font-weight: 800; letter-spacing: 2px; color: var(--cyan);">NOD</span>
+        </div>
+        <div class="port-content">
+          <h3>NOD (Inco Lightning)</h3>
+          <p>
+            A 2.5D survival-horror descent through a seven-floor house built on Inco Lightning. The floors below you are cryptographically sealed with confidential EVM proofs until earned through verifiable on-chain game state.
           </p>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">
-            <span>Mantle 5003</span>
-            <a href="https://github.com/mendouksaiii/Natural-language-policy-engine.-" target="_blank" rel="noopener noreferrer" style="color: var(--cyan-primary); text-decoration: none;">View Code &rarr;</a>
-          </div>
         </div>
+        <div class="port-hover-overlay">
+          <a href="https://github.com/mendouksaiii/nod" target="_blank" rel="noopener" class="view-btn">View Repository</a>
+        </div>
+      </article>
 
-        <!-- Repo 6: m-fi-underwriter -->
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <a href="https://github.com/mendouksaiii/m-fi-underwriter" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--cyan-primary); text-decoration: none;">m-fi-underwriter</a>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">TypeScript</span>
-          </div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex: 1;">
-            Autonomous AI micro-lending protocol powered by Groq LLaMA 3.1, Tether WDK, and Aave V3. Deployed for Galáctica Hackathon.
+      <!-- Voxel Souls -->
+      <article class="port-card">
+        <div class="port-img" style="background: linear-gradient(135deg, #1c0e12, #100a1c); display: flex; align-items: center; justify-content: center; padding: 2rem;">
+          <span style="font-size: 1.8rem; font-weight: 800; letter-spacing: 1px; background: linear-gradient(135deg, #fff, #ff5f56); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Voxel Souls</span>
+        </div>
+        <div class="port-content">
+          <h3>Voxel Souls: Abyss</h3>
+          <p>
+            Browser-native action roguelite engine engineered with Three.js. Features procedural voxel dungeon generation, dynamic combat kinematics, and custom GLSL lighting passes.
           </p>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">
-            <span>DeFi & AI</span>
-            <a href="https://github.com/mendouksaiii/m-fi-underwriter" target="_blank" rel="noopener noreferrer" style="color: var(--cyan-primary); text-decoration: none;">View Code &rarr;</a>
-          </div>
         </div>
+        <div class="port-hover-overlay">
+          <a href="https://github.com/mendouksaiii/voxel-souls" target="_blank" rel="noopener" class="view-btn">View Repository</a>
+        </div>
+      </article>
 
-        <!-- Repo 7: agent-wallet-runtime -->
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <a href="https://github.com/mendouksaiii/agent-wallet-runtime" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--cyan-primary); text-decoration: none;">agent-wallet-runtime</a>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">TypeScript</span>
-          </div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex: 1;">
-            Core Node.js/TypeScript execution runtime allowing autonomous AI agents to sign transactions and interact with smart contracts without human intervention.
+      <!-- WalletSecure -->
+      <article class="port-card">
+        <div class="port-img" style="background: rgba(0,0,0,0.6) url('assets/ws-logo.png') center/contain no-repeat; padding: 2rem;"></div>
+        <div class="port-content">
+          <h3>WalletSecure</h3>
+          <p>
+            A seamless connection pipeline resolving persistent cold-start state failures in React applications. By engineering a robust connection loop, WalletSecure guarantees instant, frictionless dApp engagements.
           </p>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">
-            <span>Agent Infrastructure</span>
-            <a href="https://github.com/mendouksaiii/agent-wallet-runtime" target="_blank" rel="noopener noreferrer" style="color: var(--cyan-primary); text-decoration: none;">View Code &rarr;</a>
-          </div>
         </div>
+        <div class="port-hover-overlay">
+          <a href="https://walletsecure-8ilj.vercel.app/" target="_blank" rel="noopener" class="view-btn">View Project</a>
+        </div>
+      </article>
 
-        <!-- Repo 8: walletsecure -->
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <a href="https://github.com/mendouksaiii/walletsecure" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--cyan-primary); text-decoration: none;">walletsecure</a>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">JavaScript</span>
-          </div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex: 1;">
-            Lightweight React connection pipeline resolving cold-start state failures and connection race conditions in decentralized dApps.
+      <!-- Agent Wallet Runtime -->
+      <article class="port-card">
+        <div class="port-img" style="background: rgba(0,0,0,0.6) url('assets/awr-logo.png') center/contain no-repeat; padding: 2rem;"></div>
+        <div class="port-content">
+          <h3>Agent Wallet Runtime</h3>
+          <p>
+            The core Node.js/TypeScript runtime architecture allowing AI agents to securely transact directly with on-chain protocols without human intervention.
           </p>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">
-            <span>Web3 Frontend</span>
-            <a href="https://github.com/mendouksaiii/walletsecure" target="_blank" rel="noopener noreferrer" style="color: var(--cyan-primary); text-decoration: none;">View Code &rarr;</a>
-          </div>
         </div>
+        <div class="port-hover-overlay">
+          <a href="https://agent-wallet-runtime.vercel.app" target="_blank" rel="noopener" class="view-btn">View Dashboard</a>
+        </div>
+      </article>
 
-        <!-- Repo 9: ImmutableQuestTracker -->
-        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <a href="https://github.com/mendouksaiii/ImmutableQuestTracker" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--cyan-primary); text-decoration: none;">ImmutableQuestTracker</a>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">JavaScript</span>
-          </div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; flex: 1;">
-            Chrome Manifest V3 browser extension tracking player achievements across decentralized gaming titles and syncing progression to persistent on-chain identity profiles.
+      <!-- Immutable Quest -->
+      <article class="port-card">
+        <div class="port-img" style="background: rgba(0,0,0,0.6) url('https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?w=600&h=400&fit=crop') center/cover no-repeat; padding: 2rem;"></div>
+        <div class="port-content">
+          <h3>Immutable Quest Tracker</h3>
+          <p>
+            A Service Worker-compatible Supabase tracking extension. It seamlessly correlates gamer accomplishments, syncing progression directly to immutable on-chain profiles.
           </p>
-          <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dim);">
-            <span>Extension / Supabase</span>
-            <a href="https://github.com/mendouksaiii/ImmutableQuestTracker" target="_blank" rel="noopener noreferrer" style="color: var(--cyan-primary); text-decoration: none;">View Code &rarr;</a>
-          </div>
         </div>
+        <div class="port-hover-overlay">
+          <a href="https://github.com/mendouksaiii/ImmutableQuestTracker" target="_blank" rel="noopener" class="view-btn">Chrome Web Store</a>
+        </div>
+      </article>
 
-      </div>
+      <!-- PayLink -->
+      <article class="port-card">
+        <div class="port-img" style="background: linear-gradient(135deg, rgba(176,38,255,0.28), rgba(0,240,255,0.16)); display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 2rem; font-weight: 800; letter-spacing: 1px; background: linear-gradient(135deg, #fff, var(--cyan)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">PayLink</span>
+        </div>
+        <div class="port-content">
+          <h3>PayLink</h3>
+          <p>
+            A Venmo-style payment-link protocol on Solana. Escrow USDC/USDT on-chain, share a link, and let recipients claim via phone OTP—no wallet required—then off-ramp to fiat through MoonPay.
+          </p>
+        </div>
+        <div class="port-hover-overlay">
+          <a href="https://paylink-next.vercel.app" target="_blank" rel="noopener" class="view-btn">View Deployment</a>
+        </div>
+      </article>
+
+      <!-- Yap -->
+      <article class="port-card">
+        <div class="port-img" style="background: linear-gradient(135deg, rgba(0,240,255,0.2), rgba(176,38,255,0.28)); display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 2rem; font-weight: 800; letter-spacing: 1px; background: linear-gradient(135deg, #fff, var(--accent-primary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Yap</span>
+        </div>
+        <div class="port-content">
+          <h3>Yap</h3>
+          <p>
+            A voice-first development studio—describe an app out loud and watch it deploy to a live URL in under 30 seconds. Built with ElevenLabs voice cloning, Gemini, and Next.js for #ElevenHacks.
+          </p>
+        </div>
+        <div class="port-hover-overlay">
+          <a href="https://yap-flame.vercel.app" target="_blank" rel="noopener" class="view-btn">Launch App</a>
+        </div>
+      </article>
+
+      <!-- Rift -->
+      <article class="port-card">
+        <div class="port-img" style="background: rgba(0,0,0,0.6) url('assets/rift-logo.png') center/contain no-repeat; padding: 2rem;"></div>
+        <div class="port-content">
+          <h3>Rift Protocol</h3>
+          <p>
+            A highly performant interactive DApp architected on Somnia. Utilizing Hardhat and an ultra-reactive frontend, Rift gamifies complex DeFi parameters seamlessly.
+          </p>
+        </div>
+        <div class="port-hover-overlay">
+          <a href="https://rift-protocol.app" target="_blank" rel="noopener" class="view-btn">Launch App</a>
+        </div>
+      </article>
+
     </section>
-
   </main>
 
-  <!-- Global Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <h4>Mendouksai<span>.</span></h4>
-          <p>Full-Stack Creative Technologist & Autonomous Systems Architect. Operating at the frontier of autonomous AI agents, smart contracts, and WebGL physics engines.</p>
-        </div>
+  <!-- Floating Virtual Assistant Bitmoji -->
+  <div style="position: fixed; bottom: 30px; right: 30px; z-index: 1000; animation: float 5s infinite ease-in-out;" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <img src="assets/creator-pfp-tiny.jpg" alt="Agent Mendouksai" class="anim-pulse" style="width: 65px; height: 65px; border-radius: 50%; border: 3px solid var(--cyan); box-shadow: 0 0 20px rgba(0,240,255,0.5); cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Mendouksai Network is Online - Scroll to Top">
+  </div>
 
-        <div class="footer-links-group">
-          <div class="footer-col">
-            <h5>Navigation</h5>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="developer.html">Developer & Architecture</a></li>
-              <li><a href="web3-creator.html">Creator Journey</a></li>
-              <li><a href="contact.html">Comms Uplink</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h5>Production Builds</h5>
-            <ul>
-              <li><a href="https://redline-rider.vercel.app" target="_blank" rel="noopener noreferrer">Redline Rider (60 FPS)</a></li>
-              <li><a href="https://m-fi-underwriter.vercel.app" target="_blank" rel="noopener noreferrer">M-Fi Underwriter</a></li>
-              <li><a href="https://walletsecure-8ilj.vercel.app/" target="_blank" rel="noopener noreferrer">WalletSecure</a></li>
-              <li><a href="https://github.com/mendouksaiii/Natural-language-policy-engine.-" target="_blank" rel="noopener noreferrer">SENTINEL (Mantle)</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h5>Channels</h5>
-            <ul>
-              <li><a href="https://github.com/mendouksaiii" target="_blank" rel="noopener noreferrer">GitHub: @mendouksaiii</a></li>
-              <li><a href="https://x.com/mendouksaiiii_" target="_blank" rel="noopener noreferrer">𝕏: @mendouksaiiii_</a></li>
-              <li><a href="https://t.me/mendouksaiii" target="_blank" rel="noopener noreferrer">Telegram: @mendouksaiii</a></li>
-              <li><a href="mailto:mendouksaiiiix99@gmail.com">Email Direct</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>&copy; 2026 Mendouksai Vanguard. Built for the Autonomous & Creative Web.</div>
-        <div style="display: flex; gap: 1.5rem;">
-          <span>LATENCY: &lt;21MS</span>
-          <span>SYSTEM: NOMINAL</span>
-          <span>UPTIME: 99.98%</span>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!-- Sound Toggle Button -->
+  <button id="soundToggle" title="Sound On — Click to Mute" style="
+    position: fixed; bottom: 30px; left: 30px; z-index: 1001;
+    width: 50px; height: 50px; border-radius: 50%;
+    background: rgba(0,240,255,0.08); border: 1px solid var(--cyan);
+    color: var(--cyan); font-size: 1.4rem; cursor: pointer;
+    backdrop-filter: blur(8px); transition: all 0.3s ease;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 15px rgba(0,240,255,0.2);
+  " onmouseover="this.style.boxShadow='0 0 25px rgba(0,240,255,0.6)'; this.style.transform='scale(1.1)';"
+     onmouseout="this.style.boxShadow='0 0 15px rgba(0,240,255,0.2)'; this.style.transform='scale(1)';">🔊</button>
 
   <script src="js/script.js"></script>
 </body>
